@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Aretha Iskandar`,
+    description: `The personal website of singer and songwriter Aretha Iskandar.`,
+    keywords:
+      "Aretha Iskandar, Chanteuse, Singer, Songwriter, Jazz, Soul, Paris",
     author: `@gatsbyjs`,
   },
   plugins: [

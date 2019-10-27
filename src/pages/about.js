@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const ABoutPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <div className="content">
       <Tilt />
       <h2 className="content__title">Aretha Iskandar</h2>
@@ -15,4 +15,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ABoutPage

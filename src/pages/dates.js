@@ -4,14 +4,14 @@ import Layout from "../components/layout"
 import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
-const ABoutPage = () => (
+const DatesPage = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Dates" />
     <div className="content">
-      <Tilt bgImage={"4.jpg"} />
-      <h2 className="content__title">About</h2>
+      <Tilt bgImage={"aretha.jpg"} />
+      <h2 className="content__title">Dates</h2>
     </div>
   </Layout>
 )
 
-export default ABoutPage
+export default DatesPage

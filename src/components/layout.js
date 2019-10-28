@@ -15,7 +15,7 @@ import Nav from "./nav"
 
 import "./base.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, extraComponent }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
       <div className="frame">
         <Header siteTitle={data.site.siteMetadata.title} />
       </div>
-
+      {extraComponent}
       <main>{children}</main>
       <Nav />
     </>

@@ -299,6 +299,12 @@ main {
   margin-top: 6rem;
 }
 
+.inner-content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
 .background {
   perspective: 1000px;
 }

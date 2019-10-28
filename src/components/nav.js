@@ -13,7 +13,7 @@ export default class Nav extends Component {
     this.openCtrl = createRef()
     this.closeCtrl = createRef()
     this.DOM = {}
-    this.allowTilt = true
+    global.allowTilt = true
     this.open = this.open.bind(this)
     this.close = this.close.bind(this)
     this.toggle = this.toggle.bind(this)
@@ -22,6 +22,12 @@ export default class Nav extends Component {
   componentDidMount() {
     this.DOM.openCtrl = document.querySelector(".action--menu")
     this.DOM.closeCtrl = document.querySelector(".action--close")
+    this.DOM.openCtrl.addEventListener("mouseenter", () => {
+      global.allowTilt = false
+    })
+    this.DOM.openCtrl.addEventListener("mouseleave", () => {
+      global.allowTilt = true
+    })
     // The menu items.
     this.DOM.items = Array.from(document.querySelectorAll(".menu__item"))
     // The total number of items.
@@ -53,7 +59,7 @@ export default class Nav extends Component {
   toggle(action) {
     if (this.isAnimating) return
     // (dis)allow the main image tilt effect.
-    this.allowTilt = action === "open" ? false : true
+    global.allowTilt = action === "open" ? false : true
     this.isAnimating = true
     // After all is animated..
     const animationEnd = pos => {
@@ -93,8 +99,6 @@ export default class Nav extends Component {
         configInner.x = "-101%"
         configInner.y = "-101%"
       }
-
-      console.log({ el, global, window })
 
       if (action === "open") {
         // Setting the initial values.

@@ -39,7 +39,7 @@ const TextElement = styled.div`
 `
 
 const ABoutPage = () => (
-  <Layout>
+  <Layout showBackdrop>
     <SEO title="About" />
     <div className="content">
       <Tilt bgImage={"about.jpg"} />

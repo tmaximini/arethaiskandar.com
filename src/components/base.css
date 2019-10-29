@@ -285,6 +285,8 @@ a:focus {
 main {
   position: relative;
   width: 100%;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .frame {
@@ -343,6 +345,18 @@ main {
   left: 1.5rem;
 }
 
+.backdrop-header::after {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
 .info {
   display: block;
   grid-area: info;
@@ -385,6 +399,11 @@ main {
   color: var(--color-title);
   z-index: 199;
   cursor: default;
+}
+
+.logo-header__title a,
+.logo-header__title a:hover {
+  color: var(--color-tagline);
 }
 
 .content__tagline {
@@ -797,4 +816,26 @@ main {
   .menu__item-inner:hover .menu__item-hoverlink {
     opacity: 1;
   }
+
+  .backdrop-header::after {
+    display: none;
+  }
+}
+
+.photogrid {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.photogrid--title {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 100;
+  color: var(--color-title);
 }

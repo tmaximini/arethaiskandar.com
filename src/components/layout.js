@@ -15,7 +15,14 @@ import Nav from "./nav"
 
 import "./base.css"
 
-const Layout = ({ children, extraComponent }) => {
+const Layout = ({
+  children,
+  extraComponent,
+  customTitle,
+  customLink,
+  showBackdrop,
+  hideTitle,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -35,8 +42,13 @@ const Layout = ({ children, extraComponent }) => {
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
       </Helmet>
-
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {!hideTitle && (
+        <Header
+          siteTitle={customTitle || data.site.siteMetadata.title}
+          customLink={customLink}
+          showBackdrop={showBackdrop}
+        />
+      )}
       {extraComponent}
       <main>{children}</main>
       <Nav />

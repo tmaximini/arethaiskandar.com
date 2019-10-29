@@ -1,13 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Layout from "../components/layout"
+import GridItem from "../components/grid-item"
+import SEO from "../components/seo"
 
 const Photos = ({ data: { photos, images } }) => {
   console.info({ photos, images })
   return (
-    <div>
-      <h1>photos</h1>
-    </div>
+    <Layout showBackdrop customTitle={photos.title_detail} customLink="/photos">
+      <SEO title="Home" />
+      <section className="photogrid">
+        {images.nodes.map(node => (
+          <GridItem key={node.name}>
+            <Img fluid={node.childImageSharp.fluid} />
+          </GridItem>
+        ))}
+      </section>
+    </Layout>
   )
 }
 

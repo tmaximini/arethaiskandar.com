@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import ImageFader from "../components/image-fader"
 import Layout from "../components/layout"
@@ -6,9 +7,8 @@ import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data: { allImages } }) => {
-  console.info({ allImages })
   return (
-    <Layout extraComponent={<ImageFader images={allImages.edges} />}>
+    <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO title="Home" />
       <div className="content">
         {/* <Tilt /> */}

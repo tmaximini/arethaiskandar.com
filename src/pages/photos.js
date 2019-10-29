@@ -1,5 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
+import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 
 import GridItem from "../components/grid-item"
 import Layout from "../components/layout"
@@ -7,23 +9,27 @@ import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
 const PhotosPage = ({ data: { photos } }) => (
-  <Layout>
-    <SEO title="Music" />
-    <div className="content">
-      <h2 className="content__title">Photos</h2>
-      <div className="inner-content">
-        {photos.nodes.map(photo => (
-          <GridItem
-            key={photo.slug}
-            to={photo.slug}
-            aria-label={`View photo "${photo.title}"`}
-          >
-            <Img fluid={photo.cover.childImageSharp.fluid} />
-            <span>{photo.title}</span>
-          </GridItem>
-        ))}
-      </div>
-    </div>
+  <Layout showBackdrop>
+    <SEO title="Photos" />
+    <section className="photogrid">
+      {photos.nodes.map(photo => (
+        <GridItem key={photo.slug}>
+          <Img fluid={photo.cover.childImageSharp.fluid} />
+          <div className="table">
+            <div className="vert-center">
+              <h2>{photo.title}</h2>
+              <Link
+                to={photo.slug}
+                aria-label={`View photo "${photo.title}"`}
+                className="show-gallery"
+              >
+                <span>View Photos</span>
+              </Link>
+            </div>
+          </div>
+        </GridItem>
+      ))}
+    </section>
   </Layout>
 )
 

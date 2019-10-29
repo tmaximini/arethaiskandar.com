@@ -6,13 +6,12 @@ import GridItem from "../components/grid-item"
 import SEO from "../components/seo"
 
 const Photos = ({ data: { photos, images } }) => {
-  console.info({ photos, images })
   return (
     <Layout showBackdrop customTitle={photos.title_detail} customLink="/photos">
       <SEO title="Home" />
       <section className="photogrid">
         {images.nodes.map(node => (
-          <GridItem key={node.name}>
+          <GridItem noEffect key={node.name}>
             <Img fluid={node.childImageSharp.fluid} />
           </GridItem>
         ))}

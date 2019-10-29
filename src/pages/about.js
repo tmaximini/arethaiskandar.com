@@ -43,7 +43,7 @@ const ABoutPage = () => (
     <SEO title="About" />
     <div className="content">
       <Tilt bgImage={"about.jpg"} />
-      <h2 className="content__title">About</h2>
+      <h2 className="content__title content__title--small">About</h2>
       <TextElement>
         <div className="inner">
           <p>

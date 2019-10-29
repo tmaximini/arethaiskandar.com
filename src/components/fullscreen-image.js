@@ -1,9 +1,5 @@
 import styled from "styled-components"
 
-const defaultProps = {
-  isActive: false,
-}
-
 const FullScreenImage = styled("div")`
   position: fixed;
   width: 100%;

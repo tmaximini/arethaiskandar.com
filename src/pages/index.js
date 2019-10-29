@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import ImageFader from "../components/image-fader"
 import Layout from "../components/layout"
-import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data: { allImages } }) => {

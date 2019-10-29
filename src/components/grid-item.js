@@ -25,7 +25,7 @@ const GridItem = styled.article`
   > div img {
     transition: all 0.3s ease 0s !important;
     &:hover {
-      transform: scale3d(1.1, 1.1, 1);
+      transform: ${props => (props.noEffect ? "none" : "scale3d(1.1, 1.1, 1)")};
     }
   }
 
@@ -79,7 +79,7 @@ const GridItem = styled.article`
 
   &:hover {
     > div img {
-      transform: scale(1.1);
+      transform: ${props => (props.noEffect ? "none" : "scale(1.1)")};
     }
   }
 `

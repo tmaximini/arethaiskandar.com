@@ -1,11 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
 
 import GridItem from "../components/grid-item"
 import Layout from "../components/layout"
-import Tilt from "../components/tilt"
 import SEO from "../components/seo"
 
 const PhotosPage = ({ data: { photos } }) => (

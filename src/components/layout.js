@@ -36,9 +36,7 @@ const Layout = ({ children, extraComponent }) => {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
       </Helmet>
 
-      <div className="frame">
-        <Header siteTitle={data.site.siteMetadata.title} />
-      </div>
+      <Header siteTitle={data.site.siteMetadata.title} />
       {extraComponent}
       <main>{children}</main>
       <Nav />

@@ -8,7 +8,7 @@ const MusicPage = () => (
   <Layout>
     <SEO title="Music" />
     <div className="content">
-      <Tilt bgImage={"aretha2.jpg"} />
+      <Tilt bgImage={"1.jpg"} />
       <h2 className="content__title">Music</h2>
     </div>
   </Layout>

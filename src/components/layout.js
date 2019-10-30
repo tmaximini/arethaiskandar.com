@@ -40,6 +40,10 @@ const Layout = ({
           href="https://fonts.googleapis.com/css?family=Caveat&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet"
+        ></link>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
       </Helmet>
       {!hideTitle && (

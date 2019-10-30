@@ -11,9 +11,9 @@ const GridItem = styled.article`
     width: 50%;
   }
 
-  //   @media screen and (min-width: 100em) {
-  //     width: 33.33333%;
-  //   }
+  @media screen and (min-width: 100em) {
+    width: 33.33333%;
+  }
 
   > div {
     position: absolute !important;

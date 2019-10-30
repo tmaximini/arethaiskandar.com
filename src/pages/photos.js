@@ -15,10 +15,10 @@ const PhotosPage = ({ data: { photos } }) => (
           <Img fluid={photo.cover.childImageSharp.fluid} />
           <div className="table">
             <div className="vert-center">
-              <h2>{photo.title}</h2>
+              <h2>{photo.title_detail}</h2>
               <Link
                 to={photo.slug}
-                aria-label={`View photo "${photo.title}"`}
+                aria-label={`View photo "${photo.title_detail}"`}
                 className="show-gallery"
               >
                 <span>View Photos</span>
@@ -38,6 +38,7 @@ export const query = graphql`
     photos: allPhotosYaml {
       nodes {
         title
+        title_detail
         slug
         cover {
           childImageSharp {

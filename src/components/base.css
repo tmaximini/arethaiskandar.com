@@ -787,7 +787,7 @@ main {
     color: var(--color-link-hover);
   }
 
-  .mainmenu__item::before {
+  /* .mainmenu__item::before {
     counter-increment: menuitem;
     content: counters(menuitem, "", decimal-leading-zero);
     position: absolute;
@@ -795,7 +795,7 @@ main {
     top: 25%;
     left: -1.25rem;
     color: var(--color-item-alt);
-  }
+  } */
   .mainmenu__item::after {
     content: "";
     width: 100%;

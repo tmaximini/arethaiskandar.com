@@ -18,10 +18,25 @@ const TextElement = styled.div`
   -webkit-font-smoothing: antialiased !important;
   font-size: 1.2rem;
   line-height: 1.625;
-  color: #e2e2e2 !important;
+  color: var(--color-bg);
   max-height: 80vh;
   box-sizing: border-box;
   overflow: auto;
+
+  h3 {
+    position: relative;
+
+    &:after {
+      content: "";
+      background-color: var(--color-bg);
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      display: block;
+    }
+  }
 
   .gatsby-image-wrapper,
   p {
@@ -35,10 +50,9 @@ const AboutPage = ({ data }) => {
     <Layout light showBackdrop>
       <SEO title="About" />
       <div className="content">
-        <h2 className="content__title content__title--small">About</h2>
         <TextElement>
+          <h3>About Me</h3>
           <div className="inner">
-            <Img fluid={data.image1.childImageSharp.fluid} />
             <p>
               "Vulnerability is always the right choice cause it is really to be
               cold in a world that makes it so very difficult to be soft" wrote
@@ -47,6 +61,7 @@ const AboutPage = ({ data }) => {
               ‘’beautiful’’ but rather trying to create something ‘’real’’ by
               being the more intimate as possible.
             </p>
+            <Img fluid={data.image1.childImageSharp.fluid} />
             <p>
               Why have I chosen music? I do not have a clear-cut answer, it has
               always been ingrained in me. Music to me is a way of reflecting
@@ -64,6 +79,7 @@ const AboutPage = ({ data }) => {
               societies. Busy in our world we forget to look at it and stay numb
               or indifferent towards it.
             </p>
+            <Img fluid={data.image3.childImageSharp.fluid} />
             <p>
               I grew up in Indonesia, studying the piano for 8 years let me to
               discover that singing was what made me vibrate more inside. I
@@ -110,6 +126,13 @@ export const query = graphql`
       }
     }
     image2: file(relativePath: { eq: "about2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image3: file(relativePath: { eq: "about3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 100) {
           ...GatsbyImageSharpFluid

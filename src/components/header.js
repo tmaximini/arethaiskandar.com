@@ -2,11 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle, customLink, showBackdrop }) => (
+const Header = ({ siteTitle, customLink, light, showBackdrop }) => (
   <h1
-    className={
-      showBackdrop ? "logo-header__title backdrop-header" : "logo-header__title"
-    }
+    className={light ? "logo-header__title title--light" : "logo-header__title"}
   >
     <Link to={customLink || "/"}>{siteTitle}</Link>
   </h1>

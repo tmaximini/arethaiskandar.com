@@ -22,6 +22,7 @@ const Layout = ({
   customLink,
   showBackdrop,
   hideTitle,
+  light,
 }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -51,11 +52,12 @@ const Layout = ({
           siteTitle={customTitle || data.site.siteMetadata.title}
           customLink={customLink}
           showBackdrop={showBackdrop}
+          light={light}
         />
       )}
       {extraComponent}
-      <main>{children}</main>
-      <Nav />
+      <main className={light ? "main--light" : "main"}>{children}</main>
+      <Nav light={light} />
     </>
   )
 }

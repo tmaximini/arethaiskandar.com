@@ -169,6 +169,7 @@ export default class Nav extends Component {
 
   render() {
     const { open } = this.state
+    const { light } = this.props
     return (
       <nav ref={this.domRef} className={open ? "menu menu--open" : "menu"}>
         <div className="menu__item menu__item--1" data-direction="bt">
@@ -196,11 +197,11 @@ export default class Nav extends Component {
                 Music
               </Link>
               <Link
-                to="/dates"
+                to="/news"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
-                Dates
+                News
               </Link>
               <Link
                 to="/photos"
@@ -236,7 +237,7 @@ export default class Nav extends Component {
               >
                 <span className="sidemenu__item-inner">Facebook</span>
               </a>
-              <a href="#" className="sidemenu__item">
+              {/* <a href="#" className="sidemenu__item">
                 <span className="sidemenu__item-inner">Youtube</span>
               </a>
               <a
@@ -246,14 +247,17 @@ export default class Nav extends Component {
                 className="sidemenu__item"
               >
                 <span className="sidemenu__item-inner">Twitter</span>
-              </a>
+              </a> */}
               <a
                 href="mailto:iskaretha@gmail.com"
                 title="Send an E-Mail"
                 className="sidemenu__item"
               >
-                <span className="sidemenu__item-inner">Mail</span>
+                <span className="sidemenu__item-inner">E-Mail</span>
               </a>
+              <Link to="/imprint" title="Imprint" className="sidemenu__item">
+                <span className="sidemenu__item-inner">Imprint</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -273,7 +277,9 @@ export default class Nav extends Component {
         <button
           ref={this.openCtrl}
           onClick={this.open}
-          className="action action--menu"
+          className={
+            light ? "action action--menu menu--light" : "action action--menu"
+          }
         >
           <svg className="icon icon--menu" id="icon-menu" viewBox="0 0 119 25">
             <path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z" />

@@ -296,6 +296,14 @@ main {
   overflow: auto;
 }
 
+.main--light {
+  background-color: var(--color-text);
+}
+
+.menu--light {
+  color: var(--color-bg) !important;
+}
+
 .frame {
   position: relative;
   z-index: 199;
@@ -350,6 +358,10 @@ main {
   top: 1.5rem;
   z-index: 199;
   left: 1.5rem;
+}
+
+.title--light a {
+  color: var(--color-bg) !important;
 }
 
 .backdrop-header::after {

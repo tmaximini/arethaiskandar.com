@@ -3,50 +3,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Tilt from "../components/tilt"
+import TextElement from "../components/text-element"
 import SEO from "../components/seo"
-
-import styled from "styled-components"
-
-const TextElement = styled.div`
-  text-align: left;
-  margin: 40px 10px 60px 10px;
-  font-weight: 300;
-  padding: 10px;
-  max-width: 1000px;
-  font-family: "Quicksand", sans-serif;
-  -webkit-font-smoothing: antialiased !important;
-  font-size: 1.2rem;
-  line-height: 1.625;
-  color: var(--color-bg);
-  max-height: 80vh;
-  box-sizing: border-box;
-  overflow: auto;
-
-  h3 {
-    position: relative;
-
-    &:after {
-      content: "";
-      background-color: var(--color-bg);
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 80px;
-      height: 2px;
-      display: block;
-    }
-  }
-
-  .gatsby-image-wrapper,
-  p {
-    margin: 20px 0;
-  }
-
-  .inner a {
-    color: var(--color-info) !important;
-  }
-`
 
 const ImprintPage = ({ data }) => {
   console.info({ data })
@@ -198,7 +156,6 @@ const ImprintPage = ({ data }) => {
                 </a>
               </li>
             </ul>
-            <Img fluid={data.image1.childImageSharp.fluid} />
           </div>
         </TextElement>
       </div>
@@ -207,15 +164,3 @@ const ImprintPage = ({ data }) => {
 }
 
 export default ImprintPage
-
-export const query = graphql`
-  query {
-    image1: file(relativePath: { eq: "imprint.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

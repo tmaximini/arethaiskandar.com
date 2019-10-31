@@ -127,6 +127,11 @@ export default class Tilt extends Component {
       () => document.body.classList.remove("loading")
     )
     new TiltFx(this.props.bgImage)
+    document.body.style.overflow = "hidden"
+  }
+
+  componentWillMount() {
+    document.body.style.overflow = "auto"
   }
 
   render() {

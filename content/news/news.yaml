@@ -1,0 +1,16 @@
+- title: "Interviews"
+  title_detail: "Interviews and Videos"
+  slug: "/interviews-videos"
+  images: "interviews"
+  cover: "./interviews/cover.jpg"
+  desc: "Interviews description. "
+  videos: ["https://www.youtube.com/embed/O2K0ptoYpuc"]
+- title: "Press"
+  title_detail: "Press and Media"
+  slug: "/press"
+  images: "press"
+  cover: "./press/cover.jpg"
+  desc: "Press description. "
+  videos: []
+  translation_en: "An unexpected success for the singer and composer Aretha Iskandar's band, who came from Paris. At the 'Kleiner Konzertsaal' full to bursting, the group seduced the audience from the first notes, with its blend of soul, Jazz & chanson -- Münchener Abendzeitung"
+  translation_fr: "Un succes inatendu pour le groupe de la chanteuse et compositrice Aretha Iskandar, venu tout expres de Paris. Au 'Kleiner Konzertsaal plein à craquer, le groupe seduit des les premieres notes le public, avec son melange de soul, jazz et chanson -- Münchener Abendzeitung"

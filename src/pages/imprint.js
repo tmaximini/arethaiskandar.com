@@ -7,7 +7,6 @@ import TextElement from "../components/text-element"
 import SEO from "../components/seo"
 
 const ImprintPage = ({ data }) => {
-  console.info({ data })
   return (
     <Layout light showBackdrop>
       <SEO title="Imprint" />
@@ -18,7 +17,8 @@ const ImprintPage = ({ data }) => {
             <h4>Photo Credits</h4>
 
             <p>
-              Most photos on this website are taken by{" "}
+              Most photos on this website are taken by and used with permission
+              of{" "}
               <a href="https://www.instagram.com/nlprt/">
                 Niels Porta Photography
               </a>

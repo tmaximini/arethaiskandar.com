@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const Photos = ({ data: { photos, images } }) => {
   return (
     <Layout showBackdrop customTitle={photos.title_detail} customLink="/photos">
-      <SEO title="Home" />
+      <SEO title={`Photos | ${photos.title_detail}`} />
       <section className="photogrid">
         {images.nodes.map(node => (
           <GridItem noEffect key={node.name}>
@@ -47,6 +47,7 @@ export const query = graphql`
     images: allFile(filter: { relativePath: { regex: $images } }) {
       nodes {
         name
+        extension
         childImageSharp {
           fluid(quality: 95, maxWidth: 1200) {
             ...GatsbyImageSharpFluid_withWebp

@@ -223,7 +223,6 @@ export default class Nav extends Component {
             <div className="sidemenu">
               <a
                 href="https://www.instagram.com/arethaiskandar/"
-                target="_blank"
                 title="Instagram"
                 className="sidemenu__item"
               >
@@ -231,7 +230,6 @@ export default class Nav extends Component {
               </a>
               <a
                 href="https://www.facebook.com/Aretha-Iskandar-384199759107438/"
-                target="_blank"
                 title="Facebook Fan Page"
                 className="sidemenu__item"
               >
@@ -242,7 +240,6 @@ export default class Nav extends Component {
               </a> */}
               <a
                 href="https://twitter.com/arethaiskandar"
-                target="_blank"
                 title="Twitter"
                 className="sidemenu__item"
               >

@@ -11,8 +11,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const photosTemplate = require.resolve("./src/templates/photos.js")
+  const newsTemplate = require.resolve("./src/templates/news.js")
 
-  const result = await wrapper(
+  const allPhotos = await wrapper(
     graphql(`
       {
         photos: allPhotosYaml {
@@ -25,10 +26,35 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
   )
 
-  result.data.photos.nodes.forEach(node => {
+  const allNews = await wrapper(
+    graphql(`
+      {
+        news: allNewsYaml {
+          nodes {
+            slug
+            images
+          }
+        }
+      }
+    `)
+  )
+
+  allPhotos.data.photos.nodes.forEach(node => {
     createPage({
       path: node.slug,
       component: photosTemplate,
+      context: {
+        slug: node.slug,
+        images: `/${node.images}/`,
+      },
+    })
+  })
+
+  allNews.data.news.nodes.forEach(node => {
+    console.info({ node })
+    createPage({
+      path: node.slug,
+      component: newsTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,

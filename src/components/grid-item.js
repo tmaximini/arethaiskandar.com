@@ -34,6 +34,7 @@ const GridItem = styled.article`
     height: 100%;
     width: 100%;
     text-align: center;
+
     z-index: 1;
     &:before {
       width: 100%;
@@ -48,8 +49,18 @@ const GridItem = styled.article`
     }
   }
 
+  .table--inner {
+    vertical-align: middle;
+    display: table-cell;
+    background-color: var(--color-text);
+    p {
+      color: var(--color-bg);
+      padding: 20px;
+    }
+  }
+
   .table:hover::before {
-    display: block;
+    display: ${props => (props.noEffect ? "none" : "block")};
   }
 
   .vert-center {

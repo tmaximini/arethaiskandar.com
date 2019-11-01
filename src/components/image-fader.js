@@ -23,7 +23,7 @@ const ImageFader = ({ images }) => {
 
   useInterval(() => {
     setActive((active + 1) % images.length)
-  }, 4000)
+  }, 2000)
 
   return (
     <div>

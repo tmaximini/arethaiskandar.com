@@ -239,7 +239,7 @@ export default class Nav extends Component {
               </a>
               {/* <a href="#" className="sidemenu__item">
                 <span className="sidemenu__item-inner">Youtube</span>
-              </a>
+              </a> */}
               <a
                 href="https://twitter.com/arethaiskandar"
                 target="_blank"
@@ -247,7 +247,7 @@ export default class Nav extends Component {
                 className="sidemenu__item"
               >
                 <span className="sidemenu__item-inner">Twitter</span>
-              </a> */}
+              </a>
               <a
                 href="mailto:iskaretha@gmail.com"
                 title="Send an E-Mail"

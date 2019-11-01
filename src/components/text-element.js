@@ -34,6 +34,12 @@ const TextElement = styled.div`
   .gatsby-image-wrapper,
   p {
     margin: 20px 0;
+    &::-moz-selection,
+    &::selection,
+    &::-webkit-selection {
+      background-color: #75cca4;
+      color: #f2f2f2;
+    }
   }
 
   .inner a {

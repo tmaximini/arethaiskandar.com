@@ -130,7 +130,7 @@ export default class Tilt extends Component {
     document.body.style.overflow = "hidden"
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     document.body.style.overflow = "auto"
   }
 

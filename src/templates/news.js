@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import GridItem from "../components/grid-item"
 import SEO from "../components/seo"
-import Video from "../components/video"
+import VideoGridItem from "../components/video-grid-item"
 
 const News = ({ data: { news, images } }) => {
   return (
@@ -32,7 +32,7 @@ const News = ({ data: { news, images } }) => {
         )}
         {news.videos &&
           news.videos.map(vid => (
-            <Video
+            <VideoGridItem
               videoSrcURL={vid}
               videoTitle="Official Music Video on YouTube"
             />

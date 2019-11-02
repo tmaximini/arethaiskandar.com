@@ -4,7 +4,7 @@
   images: "interviews"
   cover: "./interviews/cover.jpg"
   desc: "Interviews description. "
-  videos: ["https://www.youtube.com/embed/O2K0ptoYpuc"]
+  videos: ["https://www.youtube.com/embed/C3mZhSuIxjw"]
 - title: "Press"
   title_detail: "Press and Media"
   slug: "/press"

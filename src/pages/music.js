@@ -1,15 +1,24 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Tilt from "../components/tilt"
+import Video from "../components/video"
+import TextElement from "../components/text-element"
 import SEO from "../components/seo"
 
 const MusicPage = () => (
-  <Layout>
+  <Layout light showBackdrop>
     <SEO title="Music" />
     <div className="content">
-      <Tilt bgImage={"1.jpg"} />
-      <h2 className="content__title">Music</h2>
+      <TextElement>
+        <h3>Music</h3>
+        <div className="inner">
+          <p>Live at Klangfest, Munich, 2019.</p>
+          <Video
+            videoSrcURL="https://www.youtube.com/embed/DsrUlJoAUjk"
+            videoTitle="Live at Klangfest"
+          />
+        </div>
+      </TextElement>
     </div>
   </Layout>
 )

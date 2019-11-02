@@ -2,17 +2,18 @@ import React from "react"
 import styled from "styled-components"
 
 const VideoContainer = styled.div`
+  height: 50%;
   width: 100%;
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+
+  @media screen and (min-width: 53em) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 100em) {
+    width: 33.33333%;
+  }
 
   iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
   }

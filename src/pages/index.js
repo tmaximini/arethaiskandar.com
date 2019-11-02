@@ -23,7 +23,10 @@ export default IndexPage
 
 export const query = graphql`
   query Index {
-    allImages: allFile(filter: { sourceInstanceName: { eq: "startImages" } }) {
+    allImages: allFile(
+      sort: { fields: name }
+      filter: { sourceInstanceName: { eq: "startImages" } }
+    ) {
       edges {
         node {
           childImageSharp {

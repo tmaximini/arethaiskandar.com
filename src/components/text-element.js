@@ -4,10 +4,12 @@ import styled from "styled-components"
 
 const TextElement = styled.div`
   text-align: left;
-  margin: 40px 10px 60px 10px;
+  margin: 60px 10px 60px 10px;
   font-weight: 300;
   padding: 10px;
   max-width: 1000px;
+  width: calc(100% - 20px);
+  min-height: 80vh;
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased !important;
   font-size: 1.2rem;
@@ -40,6 +42,10 @@ const TextElement = styled.div`
       background-color: #75cca4;
       color: #f2f2f2;
     }
+  }
+
+  .inner {
+    min-height: 80%;
   }
 
   .inner a {

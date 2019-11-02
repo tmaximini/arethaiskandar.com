@@ -30,6 +30,9 @@ export default class Nav extends Component {
     })
     // The menu items.
     this.DOM.items = Array.from(document.querySelectorAll(".menu__item"))
+
+    console.log(this.DOM.items)
+
     // The total number of items.
     this.itemsTotal = this.DOM.items.length
     // Custom elements that will be animated.
@@ -45,7 +48,7 @@ export default class Nav extends Component {
   // Open the menu.
   open() {
     this.toggle("open")
-    document.body.style.overflow = "hidden"
+    // document.body.style.overflow = "hidden"
     this.setState({
       open: true,
     })
@@ -54,7 +57,7 @@ export default class Nav extends Component {
   close() {
     this.toggle("close")
 
-    document.body.style.overflow = "auto"
+    // document.body.style.overflow = "auto"
     this.setState({
       open: false,
     })
@@ -225,22 +228,27 @@ export default class Nav extends Component {
           <div className="menu__item-inner">
             <div className="sidemenu">
               <a
-                href="https://www.instagram.com/arethaiskandar/"
+                href="https://www.instagram.com/arethaiskandar"
                 title="Instagram"
                 className="sidemenu__item"
               >
                 <span className="sidemenu__item-inner">Instagram</span>
               </a>
               <a
-                href="https://www.facebook.com/Aretha-Iskandar-384199759107438/"
+                href="https://www.facebook.com/Aretha-Iskandar-384199759107438"
                 title="Facebook Fan Page"
                 className="sidemenu__item"
               >
                 <span className="sidemenu__item-inner">Facebook</span>
               </a>
-              {/* <a href="#" className="sidemenu__item">
+              <a
+                href="https://www.youtube.com/channel/UCICD5lsVNRtPbvCi0sqXZNw"
+                title="Youtube Channel"
+                className="sidemenu__item"
+              >
                 <span className="sidemenu__item-inner">Youtube</span>
-              </a> */}
+              </a>
+
               <a
                 href="https://twitter.com/arethaiskandar"
                 title="Twitter"

@@ -44,7 +44,10 @@ export const query = graphql`
         }
       }
     }
-    images: allFile(filter: { relativePath: { regex: $images } }) {
+    images: allFile(
+      sort: { fields: name }
+      filter: { relativePath: { regex: $images } }
+    ) {
       nodes {
         name
         extension

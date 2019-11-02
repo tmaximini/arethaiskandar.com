@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const GridItem = styled.article`
   position: relative;
-  padding: 10px;
 
   height: 50%;
   width: 100%;

@@ -45,6 +45,7 @@ export default class Nav extends Component {
   // Open the menu.
   open() {
     this.toggle("open")
+    document.body.style.overflow = "hidden"
     this.setState({
       open: true,
     })
@@ -52,6 +53,8 @@ export default class Nav extends Component {
   // Close the menu.
   close() {
     this.toggle("close")
+
+    document.body.style.overflow = "auto"
     this.setState({
       open: false,
     })
@@ -245,13 +248,7 @@ export default class Nav extends Component {
               >
                 <span className="sidemenu__item-inner">Twitter</span>
               </a>
-              <a
-                href="mailto:iskaretha@gmail.com"
-                title="Send an E-Mail"
-                className="sidemenu__item"
-              >
-                <span className="sidemenu__item-inner">E-Mail</span>
-              </a>
+
               <Link to="/imprint" title="Imprint" className="sidemenu__item">
                 <span className="sidemenu__item-inner">Imprint</span>
               </Link>

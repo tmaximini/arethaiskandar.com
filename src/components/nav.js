@@ -31,8 +31,6 @@ export default class Nav extends Component {
     // The menu items.
     this.DOM.items = Array.from(document.querySelectorAll(".menu__item"))
 
-    console.log(this.DOM.items)
-
     // The total number of items.
     this.itemsTotal = this.DOM.items.length
     // Custom elements that will be animated.

@@ -474,6 +474,10 @@ main {
   pointer-events: none;
 }
 
+.menu__item--3 .sidemenu {
+  margin-top: -20px;
+}
+
 .action--close {
   position: absolute;
   top: 1.5rem;
@@ -645,6 +649,10 @@ main {
 @media screen and (min-width: 53em) {
   body {
     padding: 0;
+  }
+
+  .menu__item--3 .sidemenu {
+    margin-top: 0;
   }
   .content {
     position: relative;

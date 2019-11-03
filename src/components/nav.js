@@ -270,7 +270,7 @@ export default class Nav extends Component {
           <div className="menu__item-inner">
             <p className="quote">
               vulnerability is the right choice cause it is easy to be cold in a
-              world that makes it so very difficult to be soft
+              world that makes it so very difficult to be soft - rupi kaur
             </p>
           </div>
         </div>

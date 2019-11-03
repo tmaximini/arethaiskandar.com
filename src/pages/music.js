@@ -18,6 +18,10 @@ const MusicPage = () => (
             videoTitle="Live at Klangfest"
           />
         </div>
+        <p>
+          Thank you to the talented musicians who accompanied me: Pierre-Yves
+          Kerambloch, Cedric Selzer, Sydney Diens, Doriane Gamba.
+        </p>
       </TextElement>
     </div>
   </Layout>

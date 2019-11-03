@@ -51,7 +51,6 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   allNews.data.news.nodes.forEach(node => {
-    console.info({ node })
     createPage({
       path: node.slug,
       component: newsTemplate,

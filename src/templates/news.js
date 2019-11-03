@@ -12,7 +12,6 @@ const News = ({ data: { news, images } }) => {
       <SEO title={`News | ${news.title_detail}`} />
       <section className="photogrid">
         {images.nodes.map(node => {
-          console.info({ node })
           return (
             <GridItem noEffect key={node.name}>
               <Img fluid={node.childImageSharp.fluid} />
@@ -33,6 +32,7 @@ const News = ({ data: { news, images } }) => {
         {news.videos &&
           news.videos.map(vid => (
             <VideoGridItem
+              key={vid}
               videoSrcURL={vid}
               videoTitle="Official Music Video on YouTube"
             />

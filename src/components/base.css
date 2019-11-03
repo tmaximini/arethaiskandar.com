@@ -1,20 +1,9 @@
 @font-face {
-  font-family: "herkules";
-  src: url("../../static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.eot"); /* IE9*/
-  src: url("../../static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */
-      url("../../static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.woff2")
-      format("woff2"),
-    /* chrome、firefox */
-      url("../../static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.woff")
-      format("woff"),
-    /* chrome、firefox */
-      url("../../static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.ttf")
-      format("truetype"),
-    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-      url("/static/fonts/b5b231fff5745fb5afa5aae52c17b3f6.svg#Herculanum LT W01 Bold")
-      format("svg"); /* iOS 4.1- */
+  font-family: "oranienbaumregular";
+  src: url("../../static/fonts/oranienbaum-webfont.woff2") format("woff2"),
+    url("../../static/fonts/oranienbaum-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -404,7 +393,7 @@ main {
 }
 
 .content__title {
-  font-family: "herkules", "Helvetica Neue", sans-serif, serif;
+  font-family: "oranienbaumregular", "Helvetica Neue", sans-serif, serif;
   /* display: none; */
   margin: 0 20px;
 
@@ -412,7 +401,7 @@ main {
   font-weight: normal;
   mix-blend-mode: screen;
   line-height: 0.8;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 0;
   color: var(--color-title);
   z-index: 199;

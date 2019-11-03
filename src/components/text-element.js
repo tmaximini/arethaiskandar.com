@@ -44,6 +44,10 @@ const TextElement = styled.div`
     }
   }
 
+  .gatsby-image-wrapper {
+    margin: 2rem 0;
+  }
+
   .inner {
     min-height: 80%;
   }

@@ -8,8 +8,11 @@ module.exports = {
   siteUrl: "https://arethaiskandar.com", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
   siteLogo: "/logos/aretha.png", // Used for SEO and manifest
-  siteDescription: "The personal website of Aretha Iskandar",
+  siteDescription: "Aretha Iskandar, Singer and Songwriter from Paris, France",
   author: "ArethaIskandar", // Author for schema.org JSONLD
+
+  keywords:
+    "Aretha Iskandar, Artist, Singer, Soul, Jazz, Chanson, Paris, Songwriter",
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: "@arethaiskandar", // Twitter Username

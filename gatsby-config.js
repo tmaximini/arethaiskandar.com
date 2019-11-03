@@ -9,6 +9,7 @@ module.exports = {
     title: config.siteTitle,
     titleAlt: config.siteTitleAlt,
     description: config.siteDescription,
+    keywords: config.keywords,
     logo: config.siteLogo,
     headline: config.siteHeadline,
     siteLanguage: config.siteLanguage,

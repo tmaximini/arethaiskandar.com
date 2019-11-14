@@ -325,15 +325,14 @@ main {
 }
 
 .content--home {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   z-index: 99;
   align-items: center;
   padding-bottom: 25%;
-  height: 100vh;
   text-align: left;
+  height: 100vh;
 }
 
 /* Header */
@@ -906,7 +905,7 @@ main {
 }
 
 .logo--inner {
-  background-image: url("../../static/logos/a2.svg");
+  background-image: url("../../static/logos/arethaiskandar.svg");
   display: block;
   background-size: contain;
   padding: 0;

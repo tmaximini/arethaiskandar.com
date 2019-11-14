@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 
 import ImageFader from "../components/image-fader"
@@ -6,12 +6,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data: { allImages } }) => {
+  useEffect(() => {
+    window.document.body.style = "overflow: hidden"
+
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      window.document.body.style = "overflow: auto"
+    }
+  })
+
   return (
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO title="Home" />
       <div className="content--home">
-        {/* <Tilt /> */}
-
         <div className="logo-svg">
           <div className="logo--inner"></div>
         </div>

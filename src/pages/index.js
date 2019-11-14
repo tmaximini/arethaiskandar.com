@@ -12,7 +12,9 @@ const IndexPage = ({ data: { allImages } }) => {
       <div className="content">
         {/* <Tilt /> */}
 
-        <h2 className="content__title">Aretha Iskandar</h2>
+        <div className="logo-svg">
+          <div className="logo--inner"></div>
+        </div>
         <p className="content__tagline">Soul, Jazz, Chanson</p>
       </div>
     </Layout>

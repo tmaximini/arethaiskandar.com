@@ -61,6 +61,15 @@ module.exports = {
         path: `${__dirname}/content/slider-images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#91fcca`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

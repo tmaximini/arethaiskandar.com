@@ -537,8 +537,23 @@ main {
   display: none;
 }
 
-.mainmenu__item {
+.mainmenu,
+.sidemenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mainmenu__item,
+.sidemenu__item {
   opacity: 0;
+
+  padding: 10px 15px;
+}
+
+.menu--open .sidemenu__item {
+  opacity: 1;
 }
 
 .mainmenu__item,
@@ -546,7 +561,7 @@ main {
   position: relative;
   overflow: hidden;
   transition: color 0.1s;
-  margin: 0.25rem 0;
+  /* margin: 0.25rem 0; */
   display: block;
 }
 
@@ -630,6 +645,20 @@ main {
 @media screen and (min-width: 53em) {
   body {
     padding: 0;
+  }
+
+  .mainmenu {
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mainmenu__item {
+    opacity: 0;
+
+    padding: 0;
+    margin: 0.25rem 0;
   }
 
   .menu__item--3 .sidemenu {

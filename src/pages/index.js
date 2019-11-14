@@ -9,7 +9,7 @@ const IndexPage = ({ data: { allImages } }) => {
   return (
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO title="Home" />
-      <div className="content">
+      <div className="content--home">
         {/* <Tilt /> */}
 
         <div className="logo-svg">

@@ -324,6 +324,18 @@ main {
   transform: translate3d(0, 0, 0);
 }
 
+.content--home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 99;
+  align-items: center;
+  padding-bottom: 25%;
+  height: 100vh;
+  text-align: left;
+}
+
 /* Header */
 .logo-header {
   z-index: 100;
@@ -661,6 +673,10 @@ main {
     margin: 0.25rem 0;
   }
 
+  .content--home {
+    padding-bottom: 200px;
+  }
+
   .menu__item--3 .sidemenu {
     margin-top: 0;
   }
@@ -670,10 +686,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 200px auto;
+    margin: 0 auto;
     min-height: 100vh;
     text-align: left;
   }
+
   .frame {
     position: fixed;
     z-index: 199;

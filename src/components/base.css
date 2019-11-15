@@ -902,6 +902,8 @@ main {
   margin: 0 auto;
   position: relative;
   text-align: center;
+  display: block;
+  z-index: 99;
 }
 
 .logo--inner {

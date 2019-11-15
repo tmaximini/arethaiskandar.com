@@ -18,8 +18,10 @@ const TextElement = styled.div`
   box-sizing: border-box;
   overflow: auto;
 
-  h3 {
+  h1 {
     position: relative;
+    margin: 20px 0;
+    font-size: 1.5em;
 
     &:after {
       content: "";

@@ -10,7 +10,7 @@ const MusicPage = () => (
     <SEO title="Music" />
     <div className="content">
       <TextElement>
-        <h3>Music</h3>
+        <h1>Music</h1>
         <div className="inner">
           <p>Live at Klangfest, Munich, 2019.</p>
           <Video

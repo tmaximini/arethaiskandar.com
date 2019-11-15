@@ -169,7 +169,7 @@ const AboutPage = ({ data }) => {
               justifyContent: "space-between",
             }}
           >
-            <h3>About Me</h3>
+            <h1>About Me</h1>
 
             <LanguageSwitch
               onClickEn={() => setLang("en")}

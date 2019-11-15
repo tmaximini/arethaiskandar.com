@@ -560,7 +560,7 @@ main {
 .sidemenu__item {
   opacity: 0;
 
-  padding: 10px 15px;
+  padding: 15px 20px;
 }
 
 .menu--open .sidemenu__item {

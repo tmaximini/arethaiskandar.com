@@ -457,9 +457,10 @@ main {
 .action--menu {
   pointer-events: auto;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 2px;
+  right: 3px;
   z-index: 1000;
+  padding: 20px;
 }
 
 .menu--open .action--menu {
@@ -472,11 +473,11 @@ main {
 
 .action--close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.75rem;
+  top: 3px;
+  right: 15px;
   z-index: 1000;
   opacity: 0;
-  padding: 0 0.5rem;
+  padding: 20px;
 }
 
 .icon--menu {

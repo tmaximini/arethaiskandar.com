@@ -71,6 +71,13 @@ export default class Nav extends Component {
         this.isAnimating = false
       }
     }
+    if (action === "open") {
+      this.DOM.closeCtrl.style.display = "inline"
+      setTimeout(() => (this.DOM.openCtrl.style.display = "none"), 500)
+    } else {
+      this.DOM.openCtrl.style.display = "inline"
+      setTimeout(() => (this.DOM.closeCtrl.style.display = "none"), 500)
+    }
     // Going through each menu´s item.
     this.DOM.items.forEach((el, pos) => {
       // The inner wrapper.

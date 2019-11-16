@@ -477,6 +477,7 @@ main {
   right: 15px;
   z-index: 1000;
   opacity: 0;
+  display: none;
   padding: 20px;
 }
 

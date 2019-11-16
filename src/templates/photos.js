@@ -12,7 +12,11 @@ const Photos = ({ data: { photos, images } }) => {
       <section className="photogrid">
         {images.nodes.map(node => (
           <GridItem noEffect key={node.name}>
-            <Img fluid={node.childImageSharp.fluid} />
+            <Img
+              fluid={node.childImageSharp.fluid}
+              title={`Aretha Iskandar - ${photos.title_detail}`}
+              alt={`Aretha Iskandar - ${photos.title_detail}`}
+            />
           </GridItem>
         ))}
       </section>

@@ -41,7 +41,11 @@ const AboutPage = ({ data }) => {
         or indifferent towards it...
       </p>
 
-      <Img fluid={data.image3.childImageSharp.fluid} />
+      <Img
+        alt="Aretha Iskandar - Photo 1"
+        title="Aretha Iskandar"
+        fluid={data.image3.childImageSharp.fluid}
+      />
       <p>
         I grew up on Java in Indonesia. Studying the piano for 8 years led me to
         discover that singing was what made me vibrate more inside. I started
@@ -64,7 +68,11 @@ const AboutPage = ({ data }) => {
         where the real beauty is to be found.
       </p>
 
-      <Img fluid={data.image2.childImageSharp.fluid} />
+      <Img
+        alt="Aretha Iskandar - Photo 2"
+        title="Aretha Iskandar"
+        fluid={data.image2.childImageSharp.fluid}
+      />
       <p>
         Everywhere one goes, one reads or hears that happiness is about
         fulfilling one’s dream. What no one ever mentions is the hard work and
@@ -113,7 +121,11 @@ const AboutPage = ({ data }) => {
         important pour un artiste de mettre en lumière ces enjeux.
       </p>
 
-      <Img fluid={data.image3.childImageSharp.fluid} />
+      <Img
+        alt="Aretha Iskandar - Photo 1"
+        title="Aretha Iskandar"
+        fluid={data.image3.childImageSharp.fluid}
+      />
       <p>
         J’ai grandi a Java et après avoir étudié le piano classique pendant 8
         ans j’ai découvert que c’était plutôt le chant qui me faisait vibrer.
@@ -139,7 +151,11 @@ const AboutPage = ({ data }) => {
         professionnaliser en art.
       </p>
 
-      <Img fluid={data.image2.childImageSharp.fluid} />
+      <Img
+        alt="Aretha Iskandar - Photo 2"
+        title="Aretha Iskandar"
+        fluid={data.image2.childImageSharp.fluid}
+      />
       <p>
         On entend souvent dire que pour atteindre le « Bonheur » il faut être
         épanoui dans ce qu’on fait mais on ne nous parle jamais de tous les
@@ -197,7 +213,11 @@ const AboutPage = ({ data }) => {
               Ce fut un réel plaisir de travailler avec elle. Je lui souhaite de poursuivre sur sa belle lancée."
             />
 
-            <Img fluid={data.image1.childImageSharp.fluid} />
+            <Img
+              alt="Aretha Iskandar - Photo 3"
+              title="Aretha Iskandar"
+              fluid={data.image1.childImageSharp.fluid}
+            />
 
             {lang === "en" ? markupEnglish() : markupFrench()}
           </div>

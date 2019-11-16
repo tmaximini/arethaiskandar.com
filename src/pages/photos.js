@@ -12,7 +12,11 @@ const PhotosPage = ({ data: { photos } }) => (
     <section className="photogrid">
       {photos.nodes.map(photo => (
         <GridItem key={photo.slug}>
-          <Img fluid={photo.cover.childImageSharp.fluid} />
+          <Img
+            fluid={photo.cover.childImageSharp.fluid}
+            title={`Aretha Iskandar - ${photo.title_detail}`}
+            alt={`Aretha Iskandar - ${photo.title_detail}`}
+          />
           <div className="table">
             <div className="vert-center">
               <h2>{photo.title_detail}</h2>

@@ -91,7 +91,11 @@ const Philosophy = ({ data }) => {
       <p>
         «Il est facile d’être froid dans un monde, où la douceur est de plus en
         plus étouffée», écrit Rupi Kaur.
-        <br />
+        <Quote
+          who="Rupi Kaur"
+          quote="Il est facile d’être froid dans un monde, où la douceur est de plus en
+          plus étouffée."
+        />
         Je suis convaincue que la créativité nait lorsque l’artiste s’autorise à
         être vulnérable, qu’il n’essaye plus de créer du « beau » mais du « vrai
         » et lorsqu’il se plonge dans son intimité pour en partager les emotions
@@ -114,11 +118,6 @@ const Philosophy = ({ data }) => {
         modernes. En tant qu’artiste je tente à mon humble échelle de mettre en
         lumière ces enjeux.
       </p>
-      <Quote
-        who="Rupi Kaur"
-        quote="Il est facile d’être froid dans un monde, où la douceur est de plus en
-          plus étouffée."
-      />
 
       <Img
         alt="Aretha Iskandar - Photo 1"

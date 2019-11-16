@@ -8,7 +8,8 @@ module.exports = {
   siteUrl: "https://arethaiskandar.com", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
   siteLogo: "/logos/aretha.png", // Used for SEO and manifest
-  siteDescription: "Aretha Iskandar, Singer and Songwriter from Paris, France",
+  siteDescription:
+    "French-Indonesian Aretha Iskandar, currectly based in Paris, is a rising talent as a singer and composer. SHe focuses on Jazz, Soul and French CHanson.",
   author: "ArethaIskandar", // Author for schema.org JSONLD
 
   keywords:

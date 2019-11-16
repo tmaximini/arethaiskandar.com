@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import Quote from "../components/quote"
 import LanguageSwitch from "../components/language-switch"
 
-const AboutPage = ({ data }) => {
+const Philosophy = ({ data }) => {
   const markupEnglish = () => (
     <>
       <p>
@@ -89,37 +89,36 @@ const AboutPage = ({ data }) => {
   const markupFrench = () => (
     <>
       <p>
-        «Le choix de la vulnérabilité est toujours le bon, car il est facile
-        d’être froid dans un monde où il est de plus en plus difficile de rester
-        doux», écrit Rupi Kaur.
-        <Quote
-          who="Rupi Kaur"
-          quote="Le choix de la vulnérabilité est toujours le bon, car il est facile d’être froid dans un monde où il est de plus en plus difficile de rester doux"
-        />
+        «Il est facile d’être froid dans un monde, où la douceur est de plus en
+        plus étouffée», écrit Rupi Kaur.
+        <br />
         Je suis convaincue que la créativité nait lorsque l’artiste s’autorise à
         être vulnérable, qu’il n’essaye plus de créer du « beau » mais du « vrai
         » et lorsqu’il se plonge dans son intimité pour en partager les emotions
-        avec le public. Pourquoi la musique ? Je n’ai pas de réponse précise, ça
-        a toujours été comme pour de nombreux artistes quelque chose d’ancré en
-        moi. La musique pour moi, c'est une manière de refléter la nature
-        humaine, de mettre en lumière la manière dont notre monde évolue. Quand
-        je chante, j’ai des frissons et ressens jusque dans mes tripes une
-        émotion qui s’empare de moi. Mes chansons sont vraiment un espace où je
-        peux m’autoriser à être vulnérable, où j’habille mes émotions avec des
-        mots. Je raconte mes coups de foudre, mes expériences, mes angoisses,
-        mes échecs, l’impermanence, ma vision sur notre monde, mes idéaux. Tout
-        ce qui m’a un jour fait sentir toute petite, mais vivante. Mais le plus
+        avec le public.La musique pour moi, c'est une manière de refléter la
+        nature humaine, de mettre en lumière la manière dont notre monde évolue.
+        Quand je chante, j’ai des frissons et ressens jusque dans mes tripes une
+        émotion qui s’empare de moi. Mes chansons sont un espace où je peux
+        m’autoriser à être vulnérable, où j’habille mes émotions avec des mots.
+        Je raconte mes coups de foudre, mes expériences, mes angoisses, mes
+        échecs, l’impermanence, ma vision sur notre monde, mes idéaux. Tout ce
+        qui m’a un jour fait sentir toute petite, mais vivante. Mais le plus
         important pour moi c’est de transmettre ces émotions au public. Dans son
-        poème L’Albatros, Baudelaire compare l’artiste à cet oiseau, dont les
-        pulsions et la créativité le met en marge de la société. Comme l’oiseau
-        qui régurgite dans ses entrailles sa nourriture pour nourrir ces petits,
-        l’artiste régurgite dans ses entrailles ses experiences pour nourrir le
-        monde, c’est ainsi qu’il trouve sa place. Souvent surchargés et
-        distraits par nos vies, nous avons tendance à ne plus faire attention,
-        voir à devenir indifférent devant les crises et les incoherences de nos
-        sociétés modernes et je suis également intimement convaincue qu’il est
-        important pour un artiste de mettre en lumière ces enjeux.
+        poème L’Albatros, Baudelaire compare l’artiste à cet oiseau, dont la
+        sensibilité le met en marge de la société. Comme l’oiseau qui régurgite
+        depuis ses entrailles sa nourriture pour nourrir ces petits, l’artiste
+        régurgite depuis ses entrailles ses experiences pour nourrir le monde,
+        c’est ainsi qu’il trouve sa place. Souvent surchargés et distraits par
+        nos vies, nous avons tendance à ne plus faire attention, voir à devenir
+        indifférent devant les crises et les incoherences de nos sociétés
+        modernes. En tant qu’artiste je tente à mon humble échelle de mettre en
+        lumière ces enjeux.
       </p>
+      <Quote
+        who="Rupi Kaur"
+        quote="Il est facile d’être froid dans un monde, où la douceur est de plus en
+          plus étouffée."
+      />
 
       <Img
         alt="Aretha Iskandar - Photo 1"
@@ -127,28 +126,26 @@ const AboutPage = ({ data }) => {
         fluid={data.image3.childImageSharp.fluid}
       />
       <p>
-        J’ai grandi a Java et après avoir étudié le piano classique pendant 8
-        ans j’ai découvert que c’était plutôt le chant qui me faisait vibrer.
-        J’ai intégré une chorale à l’âge de 12 ans, et peu de temps après j’ai
-        commencé à écrire mes propres chansons. J’ai grandement été influencé
-        par la Pop, la Soul et le Jazz pendant mon enfance, et récemment j’ai
-        découvert la chanson française qui est si poétique. Je dirais que mes
-        chansons sont une sorte de mixte de toutes ces influences. Mes parents,
-        amoureux de la musique ont eu une grande influence sur moi, surtout mon
-        père multiinstrumentiste, qui n’a cessé de me la faire découvrir au fil
-        des années.
+        J’ai grandi a Java en Indonésie et après avoir étudié le piano classique
+        pendant 8 ans j’ai découvert que c’était plutôt le chant qui me faisait
+        vibrer. J’ai intégré une chorale à l’âge de 12 ans, et peu de temps
+        après j’ai commencé à écrire mes propres chansons. J’ai grandement été
+        influencé par la Pop, la Soul et le Jazz pendant mon enfance, et
+        récemment j’ai découvert la chanson française qui est si poétique. Je
+        dirais que mes chansons sont une sorte de mélange de toutes ces
+        influences. Mes parents, amoureux de la musique ont eu une grande
+        influence sur moi, surtout mon père multi-instrumentiste.
       </p>
       <p>
-        À l’âge de 16 ans, j’ai quitté mon foyer multiculturel pour déménager à
-        Paris, avec pour but de me rapprocher du monde artistique. Vivre seule à
-        un si jeune âge, être à des milliers de kilomètres de mes racines,
-        devoir me confronter à des défis inattendus ont forge ma personnalité,
-        enracine en moi cette notion de résilience à la difficulté, et m ont
-        convaincue de l’importance d’aller où elle réside, car c’est là que l’on
-        trouve les plus belles choses enfouies. Après mon baccalauréat
-        littéraire, j’ai intégré un double cursus en Relations International et
-        en Musique, et après avoir obtenu ma licence je décide de me
-        professionnaliser en art.
+        À l’âge de 16 ans, j’ai quitté ma famille pour déménager à Paris, avec
+        pour but de me rapprocher du monde artistique. Vivre seule à un si jeune
+        âge, être à des milliers de kilomètres de mes racines, devoir me
+        confronter à des défis inattendus ont forge ma personnalité, et m’a
+        donné goût à la difficulté car c’est la que se trouvent les plus belles
+        choses enfouient. Après mon baccalauréat littéraire, j’ai intégré un
+        double cursus en Relations Internationales et en Musique, et après avoir
+        obtenu ma licence je décide de me professionnaliser en tant que
+        auteur/compositrice/interprète.
       </p>
 
       <Img
@@ -160,12 +157,12 @@ const AboutPage = ({ data }) => {
         On entend souvent dire que pour atteindre le « Bonheur » il faut être
         épanoui dans ce qu’on fait mais on ne nous parle jamais de tous les
         sacrifices nécessaires pour y arriver. Depuis que j’ai commencé la
-        musique, j’ai dû faire face à de nombreux échecs, encore et encore, mais
-        cela m’a permis d’aller au-delà de ma gêne, de mes propres barrières
-        mentales. J’ai appris qu’au-delà de l’art le monde artistique est une
-        bataille constante où l’on doit se montrer, se révéler, et c’est ce que
-        je tente de faire ici, dans ma musique, et dans tout ce que je fais,
-        dans la manière la plus précise et authentique.
+        musique, j’ai dû faire face à de nombreux échecs cela m’a permis d’aller
+        au-delà de ma gêne, de mes propres barrières mentales. J’ai appris
+        qu’au-delà de l’art le monde artistique est une bataille constante où
+        l’on doit se montrer, se révéler, et c’est ce que je tente de faire ici,
+        dans ma musique, et dans tout ce que je fais, dans la manière la plus
+        précise et authentique.
       </p>
     </>
   )
@@ -195,30 +192,6 @@ const AboutPage = ({ data }) => {
           </div>
 
           <div className="inner">
-            <Quote
-              who="Arnaud Vernet"
-              what="Chanteur, Auteur et Compositeur, Metteur en Scène et Coach"
-              quote="Aretha porte dans sa voix la tendresse et la délicatesse de ceux qui chante avec leur coeur. 
-                    Elle a cette façon de partager ce qui la touche.  Elle mets les gens qui l'écoute dans sa confidence.
-                    Il y a dans ses chansons une évidence qui s'impose.
-                    Elle nous apporte un peu de merveilleux et de fragilité dans un monde trop rude.
-                    Elle nous autorise à être vulnérable."
-            />
-            <Quote
-              who="Cecil L. Recchia"
-              what="French Jazz vocalist and coach"
-              quote="Avec un prénom pareil Aretha devait être prédestinée à chanter. 
-              J’ai eu l’occasion de la compter parmi mes élèves à l’école Atla à Paris, où pendant un an elle s’est initiée au jazz vocal dans mon cours. 
-              Jeune femme d’abord timide, je l’ai vue se muer en une chanteuse élégante  dont la voix sait se faire puissante et caressante sans jamais trahir la belle simplicité qui la caractérise. 
-              Ce fut un réel plaisir de travailler avec elle. Je lui souhaite de poursuivre sur sa belle lancée."
-            />
-
-            <Img
-              alt="Aretha Iskandar - Photo 3"
-              title="Aretha Iskandar"
-              fluid={data.image1.childImageSharp.fluid}
-            />
-
             {lang === "en" ? markupEnglish() : markupFrench()}
           </div>
         </TextElement>
@@ -227,7 +200,7 @@ const AboutPage = ({ data }) => {
   )
 }
 
-export default AboutPage
+export default Philosophy
 
 export const query = graphql`
   query {
@@ -245,7 +218,7 @@ export const query = graphql`
         }
       }
     }
-    image3: file(relativePath: { eq: "about3.jpg" }) {
+    image3: file(relativePath: { eq: "about4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 100) {
           ...GatsbyImageSharpFluid

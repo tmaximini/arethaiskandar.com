@@ -22,17 +22,18 @@ const TextElement = styled.div`
     position: relative;
     margin: 20px 0;
     font-size: 1.5em;
+    border-bottom: 2px solid var(--color-bg);
 
-    &:after {
-      content: "";
-      background-color: var(--color-bg);
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100px;
-      height: 2px;
-      display: block;
-    }
+    // &:after {
+    //   content: "";
+    //   background-color: var(--color-bg);
+    //   position: absolute;
+    //   bottom: -2px;
+    //   left: 0;
+    //   width: 100px;
+    //   height: 2px;
+    //   display: block;
+    // }
   }
 
   .gatsby-image-wrapper,

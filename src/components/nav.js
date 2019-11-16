@@ -193,19 +193,28 @@ export default class Nav extends Component {
               >
                 Home
               </Link>
-              <Link
-                to="/about"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                About
-              </Link>
+
               <Link
                 to="/music"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
                 Music
+              </Link>
+
+              <Link
+                to="/info"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                Info
+              </Link>
+              <Link
+                to="/about"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                About
               </Link>
               <Link
                 to="/news"

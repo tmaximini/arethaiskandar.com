@@ -284,10 +284,10 @@ export default class Nav extends Component {
         </div>
         <div className="menu__item menu__item--5" data-direction="tb">
           <div className="menu__item-inner">
-            <p className="quote">
+            {/* <p className="quote">
               vulnerability is the right choice cause it is easy to be cold in a
               world that makes it so very difficult to be soft - rupi kaur
-            </p>
+            </p> */}
           </div>
         </div>
         <button

@@ -16,24 +16,20 @@ const Philosophy = ({ data }) => {
         a world that makes it so very difficult to be soft" wrote the prodigious
         Rupi Kaur. I believe that creativity is authorising oneself to be
         vulnerable, and not trying to create something beautiful but rather
-        create something real by being as intimate as possible.
-        <Quote
-          who="Rupi Kaur"
-          quote="Vulnerability is always the right choice cause it is easy to be cold in a world that makes it so very difficult to be soft"
-        />
-        Why have I chosen music? I do not have a clear-cut answer, it has always
-        been ingrained in me. Music to me is a way of reflecting humanity’s
-        nature and highlighting how our world is moving forward. When I sing, I
-        achieve this indescribable state of wellbeing, a sort of fulfilment in
-        my guts. My songs are really a space where I can let myself be
-        vulnerable. I put my emotions as words on a white sheet of paper: My
-        love(s) at first sight, my anxieties, my experiences, impermanence, my
-        vision of the world; everything that once made me feel weak but at the
-        same time full of life and emotions. In other words: everything that
-        makes me feel alive. But most importantly I wish to transmit all these
-        emotions to my audience. Baudelaire wrote in his poem l’Albatross, that
-        artists are like these birds, it is hard for them to find their place in
-        this society, their pulsions often lead them to being outcasts. But like
+        create something real by being as intimate as possible. Why have I
+        chosen music? I do not have a clear-cut answer, it has always been
+        ingrained in me. Music to me is a way of reflecting humanity’s nature
+        and highlighting how our world is moving forward. When I sing, I achieve
+        this indescribable state of wellbeing, a sort of fulfilment in my guts.
+        My songs are really a space where I can let myself be vulnerable. I put
+        my emotions as words on a white sheet of paper: My love(s) at first
+        sight, my anxieties, my experiences, impermanence, my vision of the
+        world; everything that once made me feel weak but at the same time full
+        of life and emotions. In other words: everything that makes me feel
+        alive. But most importantly I wish to transmit all these emotions to my
+        audience. Baudelaire wrote in his poem l’Albatross, that artists are
+        like these birds, it is hard for them to find their place in this
+        society, their pulsions often lead them to being outcasts. But like
         these birds that regurgitate their food to feed their babies. Artists
         regurgitates their experiences to feed the world.I also believe it is
         important for an artist to point out the inequalities of our modern
@@ -90,25 +86,20 @@ const Philosophy = ({ data }) => {
     <>
       <p>
         «Il est facile d’être froid dans un monde, où la douceur est de plus en
-        plus étouffée», écrit Rupi Kaur.
-        <Quote
-          who="Rupi Kaur"
-          quote="Il est facile d’être froid dans un monde, où la douceur est de plus en
-          plus étouffée."
-        />
-        Je suis convaincue que la créativité nait lorsque l’artiste s’autorise à
-        être vulnérable, qu’il n’essaye plus de créer du « beau » mais du « vrai
-        » et lorsqu’il se plonge dans son intimité pour en partager les emotions
-        avec le public.La musique pour moi, c'est une manière de refléter la
-        nature humaine, de mettre en lumière la manière dont notre monde évolue.
-        Quand je chante, j’ai des frissons et ressens jusque dans mes tripes une
-        émotion qui s’empare de moi. Mes chansons sont un espace où je peux
-        m’autoriser à être vulnérable, où j’habille mes émotions avec des mots.
-        Je raconte mes coups de foudre, mes expériences, mes angoisses, mes
-        échecs, l’impermanence, ma vision sur notre monde, mes idéaux. Tout ce
-        qui m’a un jour fait sentir toute petite, mais vivante. Mais le plus
-        important pour moi c’est de transmettre ces émotions au public. Dans son
-        poème L’Albatros, Baudelaire compare l’artiste à cet oiseau, dont la
+        plus étouffée», écrit Rupi Kaur. Je suis convaincue que la créativité
+        nait lorsque l’artiste s’autorise à être vulnérable, qu’il n’essaye plus
+        de créer du « beau » mais du « vrai » et lorsqu’il se plonge dans son
+        intimité pour en partager les emotions avec le public.La musique pour
+        moi, c'est une manière de refléter la nature humaine, de mettre en
+        lumière la manière dont notre monde évolue. Quand je chante, j’ai des
+        frissons et ressens jusque dans mes tripes une émotion qui s’empare de
+        moi. Mes chansons sont un espace où je peux m’autoriser à être
+        vulnérable, où j’habille mes émotions avec des mots. Je raconte mes
+        coups de foudre, mes expériences, mes angoisses, mes échecs,
+        l’impermanence, ma vision sur notre monde, mes idéaux. Tout ce qui m’a
+        un jour fait sentir toute petite, mais vivante. Mais le plus important
+        pour moi c’est de transmettre ces émotions au public. Dans son poème
+        L’Albatros, Baudelaire compare l’artiste à cet oiseau, dont la
         sensibilité le met en marge de la société. Comme l’oiseau qui régurgite
         depuis ses entrailles sa nourriture pour nourrir ces petits, l’artiste
         régurgite depuis ses entrailles ses experiences pour nourrir le monde,

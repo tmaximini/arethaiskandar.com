@@ -203,18 +203,18 @@ export default class Nav extends Component {
               </Link>
 
               <Link
-                to="/info"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                Info
-              </Link>
-              <Link
                 to="/about"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
                 About
+              </Link>
+              <Link
+                to="/philosophy"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                Philosophy
               </Link>
               <Link
                 to="/news"

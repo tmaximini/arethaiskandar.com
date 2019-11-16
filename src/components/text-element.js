@@ -57,6 +57,7 @@ const TextElement = styled.div`
 
   .inner a {
     color: var(--color-info) !important;
+    border-bottom: 1px dotted var(--color-info);
   }
 `
 

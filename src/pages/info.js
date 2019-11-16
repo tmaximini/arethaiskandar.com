@@ -76,8 +76,9 @@ const AboutPage = ({ data }) => {
               Küchenmeister.
             </p>
             <p>
-              Since summer 2019 Aretha is exclusively signed to ACT Music
-              Publishing and will develop her future projects in close relation.
+              Since summer 2019 Aretha is exclusively signed to{" "}
+              <a href="https://www.actmusic.com/en">ACT Music Publishing</a> and
+              will develop her future projects in close relation.
             </p>
           </div>
         </TextElement>

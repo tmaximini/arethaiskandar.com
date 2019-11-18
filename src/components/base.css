@@ -818,7 +818,7 @@ main {
     counter-reset: menuitem;
   }
   .mainmenu__item {
-    font-size: 5vw;
+    font-size: 4vw;
     text-transform: lowercase;
     overflow: visible;
     margin: 0.5rem 0;

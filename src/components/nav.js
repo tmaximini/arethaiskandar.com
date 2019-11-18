@@ -203,18 +203,18 @@ export default class Nav extends Component {
               </Link>
 
               <Link
-                to="/about"
+                to="/bio"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                Bio
+              </Link>
+              <Link
+                to="/about-me"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
                 About
-              </Link>
-              <Link
-                to="/philosophy"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                Philosophy
               </Link>
               <Link
                 to="/news"
@@ -269,6 +269,13 @@ export default class Nav extends Component {
                 className="sidemenu__item"
               >
                 <span className="sidemenu__item-inner">Twitter</span>
+              </a>
+              <a
+                href="mailto:info@arethaiskandar.com"
+                title="E-Mail"
+                className="sidemenu__item"
+              >
+                <span className="sidemenu__item-inner">Mail</span>
               </a>
 
               <Link to="/imprint" title="Imprint" className="sidemenu__item">

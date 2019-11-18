@@ -15,21 +15,23 @@ const Philosophy = ({ data }) => {
         "Vulnerability is always the right choice cause it is easy to be cold in
         a world that makes it so very difficult to be soft" wrote the prodigious
         Rupi Kaur. I believe that creativity is authorising oneself to be
-        vulnerable, and not trying to create something beautiful but rather
-        create something real by being as intimate as possible. Why have I
-        chosen music? I do not have a clear-cut answer, it has always been
-        ingrained in me. Music to me is a way of reflecting humanity’s nature
-        and highlighting how our world is moving forward. When I sing, I achieve
-        this indescribable state of wellbeing, a sort of fulfilment in my guts.
-        My songs are really a space where I can let myself be vulnerable. I put
-        my emotions as words on a white sheet of paper: My love(s) at first
-        sight, my anxieties, my experiences, impermanence, my vision of the
-        world; everything that once made me feel weak but at the same time full
-        of life and emotions. In other words: everything that makes me feel
-        alive. But most importantly I wish to transmit all these emotions to my
-        audience. Baudelaire wrote in his poem l’Albatross, that artists are
-        like these birds, it is hard for them to find their place in this
-        society, their pulsions often lead them to being outcasts. But like
+        vulnerable, and not trying to create something <i>beautiful</i> but
+        rather create something <i>real</i> by being as intimate as possible.
+      </p>
+      <p>
+        Why have I chosen music? I do not have a clear-cut answer, it has always
+        been ingrained in me. Music to me is a way of reflecting humanity’s
+        nature and highlighting how our world is moving forward. When I sing, I
+        achieve this indescribable state of wellbeing, a sort of fulfilment in
+        my guts. My songs are really a space where I can let myself be
+        vulnerable. I put my emotions as words on a white sheet of paper: My
+        love(s) at first sight, my anxieties, my experiences, impermanence, my
+        vision of the world; everything that once made me feel weak but at the
+        same time full of life and emotions. In other words: everything that
+        makes me feel alive. But most importantly I wish to transmit all these
+        emotions to my audience. Baudelaire wrote in his poem l’Albatross, that
+        artists are like these birds, it is hard for them to find their place in
+        this society, their pulsions often lead them to being outcasts. But like
         these birds that regurgitate their food to feed their babies. Artists
         regurgitates their experiences to feed the world.I also believe it is
         important for an artist to point out the inequalities of our modern
@@ -63,12 +65,6 @@ const Philosophy = ({ data }) => {
         the importance of choosing difficulty over comfort, because that is
         where the real beauty is to be found.
       </p>
-
-      <Img
-        alt="Aretha Iskandar - Photo 2"
-        title="Aretha Iskandar"
-        fluid={data.image2.childImageSharp.fluid}
-      />
       <p>
         Everywhere one goes, one reads or hears that happiness is about
         fulfilling one’s dream. What no one ever mentions is the hard work and
@@ -79,6 +75,11 @@ const Philosophy = ({ data }) => {
         open and reveal oneself. And this is what I’m trying to show through my
         songs in the most accurate and authentic way.
       </p>
+      <Img
+        alt="Aretha Iskandar - Photo 2"
+        title="Aretha Iskandar"
+        fluid={data.image2.childImageSharp.fluid}
+      />
     </>
   )
 
@@ -88,13 +89,15 @@ const Philosophy = ({ data }) => {
         «Il est facile d’être froid dans un monde, où la douceur est de plus en
         plus étouffée», écrit Rupi Kaur. Je suis convaincue que la créativité
         nait lorsque l’artiste s’autorise à être vulnérable, qu’il n’essaye plus
-        de créer du « beau » mais du « vrai » et lorsqu’il se plonge dans son
-        intimité pour en partager les emotions avec le public.La musique pour
-        moi, c'est une manière de refléter la nature humaine, de mettre en
-        lumière la manière dont notre monde évolue. Quand je chante, j’ai des
-        frissons et ressens jusque dans mes tripes une émotion qui s’empare de
-        moi. Mes chansons sont un espace où je peux m’autoriser à être
-        vulnérable, où j’habille mes émotions avec des mots. Je raconte mes
+        de créer du <i>beau</i> mais du <i>vrai</i> et lorsqu’il se plonge dans
+        son intimité pour en partager les emotions avec le public.
+      </p>
+      <p>
+        La musique pour moi, c'est une manière de refléter la nature humaine, de
+        mettre en lumière la manière dont notre monde évolue. Quand je chante,
+        j’ai des frissons et ressens jusque dans mes tripes une émotion qui
+        s’empare de moi. Mes chansons sont un espace où je peux m’autoriser à
+        être vulnérable, où j’habille mes émotions avec des mots. Je raconte mes
         coups de foudre, mes expériences, mes angoisses, mes échecs,
         l’impermanence, ma vision sur notre monde, mes idéaux. Tout ce qui m’a
         un jour fait sentir toute petite, mais vivante. Mais le plus important
@@ -137,12 +140,6 @@ const Philosophy = ({ data }) => {
         obtenu ma licence je décide de me professionnaliser en tant que
         auteur/compositrice/interprète.
       </p>
-
-      <Img
-        alt="Aretha Iskandar - Photo 2"
-        title="Aretha Iskandar"
-        fluid={data.image2.childImageSharp.fluid}
-      />
       <p>
         On entend souvent dire que pour atteindre le « Bonheur » il faut être
         épanoui dans ce qu’on fait mais on ne nous parle jamais de tous les
@@ -154,6 +151,11 @@ const Philosophy = ({ data }) => {
         dans ma musique, et dans tout ce que je fais, dans la manière la plus
         précise et authentique.
       </p>
+      <Img
+        alt="Aretha Iskandar - Photo 2"
+        title="Aretha Iskandar"
+        fluid={data.image2.childImageSharp.fluid}
+      />
     </>
   )
 
@@ -161,7 +163,7 @@ const Philosophy = ({ data }) => {
 
   return (
     <Layout light showBackdrop>
-      <SEO title="About" />
+      <SEO title="About Me" />
       <div className="content">
         <TextElement>
           <div
@@ -172,7 +174,7 @@ const Philosophy = ({ data }) => {
               justifyContent: "space-between",
             }}
           >
-            <h1>Philosophy</h1>
+            <h1>About Me</h1>
 
             <LanguageSwitch
               onClickEn={() => setLang("en")}

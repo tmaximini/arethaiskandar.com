@@ -38,6 +38,11 @@ const Philosophy = ({ data }) => {
         societies. Busy in our daily life we forget to look at it and stay numb
         or indifferent towards it...
       </p>
+      <p>
+        <a href="/music" title="Aretha Iskandar - Music">
+          Listen to my music
+        </a>
+      </p>
 
       <Img
         alt="Aretha Iskandar - Photo 1"
@@ -74,6 +79,11 @@ const Philosophy = ({ data }) => {
         learnt that the artistic world is a constant battle in which one has to
         open and reveal oneself. And this is what I’m trying to show through my
         songs in the most accurate and authentic way.
+      </p>
+      <p>
+        <a href="/bio" title="Aretha Iskandar - Biography">
+          Read my Biography
+        </a>
       </p>
       <Img
         alt="Aretha Iskandar - Photo 2"
@@ -163,7 +173,10 @@ const Philosophy = ({ data }) => {
 
   return (
     <Layout light showBackdrop>
-      <SEO title="About Me" />
+      <SEO
+        title="About Me"
+        description="Learn more about Aretha Iskandar, Jazz and Soul singer from Paris, France."
+      />
       <div className="content">
         <TextElement>
           <div

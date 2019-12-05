@@ -8,7 +8,10 @@ import SEO from "../components/seo"
 
 const NewsPage = ({ data: { news } }) => (
   <Layout showBackdrop>
-    <SEO title="News" />
+    <SEO
+      title="News"
+      description="News about Aretha Iskandar. This is where I post concerts, news, interviews and other interesting things on my website to keep you updated."
+    />
     <section className="photogrid">
       {news.nodes.map(news => (
         <GridItem key={news.slug}>

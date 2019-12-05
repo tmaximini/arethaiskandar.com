@@ -23,6 +23,7 @@ const TextElement = styled.div`
     margin: 20px 0;
     font-size: 1.5em;
     border-bottom: 2px solid var(--color-bg);
+    display: inline-block;
 
     // &:after {
     //   content: "";

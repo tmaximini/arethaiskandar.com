@@ -12,16 +12,19 @@ const BioPage = ({ data }) => {
   const markupFr = () => (
     <>
       {" "}
+      <h2>Aretha Iskandar - Biographie</h2>
       <Quote
         who="Arnaud Vernet"
         what="Chanteur, Auteur et Compositeur, Metteur en Scène et Coach"
         quote="Aretha porte dans sa voix la tendresse et la délicatesse de ceux qui chantent avec leur cœur. Elle a cette façon de partager ce qui la touche. Elle met les gens qui l’écoutent dans sa confidence. Il y a dans ses chansons une évidence qui s’impose. Elle nous apporte un peu de merveilleux et de fragilité dans un monde trop rude. Elle nous autorise à être vulnérables."
       />
       <p>
-        Aretha Iskandar, jeune Franco-Indonésienne est une
-        auteure-compositrice-interprète installée à Paris. Lors de sa tournée en
-        Allemagne elle éblouit le label ACT Music, avec lequel elle entre en
-        collaboration.
+        <a href="/about-me" title="About Aretha Iskandar">
+          Aretha Iskandar
+        </a>
+        , jeune Franco-Indonésienne est une auteure-compositrice-interprète
+        installée à Paris. Lors de sa tournée en Allemagne elle éblouit le label
+        ACT Music, avec lequel elle entre en collaboration.
       </p>
       <p>
         Après son baccalauréat, elle étudie la musique, incluant l'écriture de
@@ -49,16 +52,28 @@ const BioPage = ({ data }) => {
         son univers intime teinté de sensibilité et de vulnérabilité. Ses
         mélodies sont le plus souvent douces, mais peuvent aussi nous emmener
         dans des tempos plus rythmés. Paris a donné à Aretha l’occasion de se
-        produire dans plusieurs lieux tels que le Sunset Jazz Club, le 38 Riv ou
-        le Baltar, pour ne nommer que ceux-là. La musique l'a également amenée
-        en Normandie avec des concerts, notamment à La Potinière, avant sa
-        première tournée en Allemagne en été 2018. En plus de son succès au
-        festival de Munich, le KLANGfest , Aretha et son groupe se sont produits
-        dans des lieux tels que le légendaire club The Village ou Lump, Stein
-        &amp; Küchenmeister.
+        produire dans plusieurs lieux tels que le{" "}
+        <a
+          href="/photos/sunset-jazz-bar-paris-02-2019"
+          title="Aretha Iskandar live at Sunset Jazz Club, Paris"
+        >
+          Sunset Jazz Club
+        </a>
+        , le 38 Riv ou le Baltar, pour ne nommer que ceux-là. La musique l'a
+        également amenée en Normandie avec des concerts, notamment à La
+        Potinière, avant sa première tournée en Allemagne en été 2018. En plus
+        de son succès au{" "}
+        <a
+          href="/photos/klangfest-munich-germany-06-2019"
+          title="Aretha Iskandar - live at Klangfest Munich, Photos"
+        >
+          festival de Munich, le KLANGfest
+        </a>
+        , Aretha et son groupe se sont produits dans des lieux tels que le
+        légendaire club The Village ou Lump, Stein &amp; Küchenmeister.
       </p>
       <p>
-        Depuis l'été 2019, Aretha a signé un contrat exclusif avec
+        Depuis l'été 2019, Aretha a signé un contrat exclusif avec{" "}
         <a href="https://www.actmusic.com/en">ACT Music Publishing</a> et
         développera ses futurs projets en étroite collaboration avec cette
         maison.
@@ -82,14 +97,19 @@ const BioPage = ({ data }) => {
   const markupEn = () => (
     <>
       {" "}
+      <h2>Aretha Iskandar - Biography</h2>
       <Quote
         who="Arnaud Vernet"
         what="Coach"
         quote="Aretha carries in her voice the tenderness and the delicacy of those who sing with their hearts. She has her own way of sharing what moves her, which puts the listener in confidence. There is in her songs an obvious necessity. Aretha brings wonder and fragility to our rough world. She allows us to be vulnerable."
       />
       <p>
-        French-Indonesian Aretha Iskandar, currectly based in Paris, is a rising
-        talent as a singer and composer, despite of her young age.
+        French-Indonesian{" "}
+        <a href="/about-me" title="About Aretha Iskandar">
+          Aretha Iskandar
+        </a>
+        , currectly based in Paris, is a rising talent as a singer and composer,
+        despite of her young age.
       </p>
       <p>
         After her baccalaureat she studied music focused on songwriting,
@@ -112,10 +132,29 @@ const BioPage = ({ data }) => {
       />
       <p>
         Paris has given Aretha the opportunity to perform in several venues such
-        as the Sunset Jazz Club, 38 Riv or Le Baltar, just to name a few. Other
-        concert activities brought her to Normandy with concerts i.e. at La
-        Potiniere, before she went on her first tour to Germany in summer 2018.
-        Besides of her successful showcase at Munich’s renown festival KLANGfest
+        as the{" "}
+        <a
+          href="/photos/sunset-jazz-bar-paris-02-2019"
+          title="Aretha Iskandar live at Sunset Jazz Club, Paris"
+        >
+          Sunset Jazz Club
+        </a>
+        , 38 Riv or Le Baltar, just to name a few. Other concert activities
+        brought her to Normandy with concerts i.e. at{" "}
+        <a
+          href="/photos"
+          title="Photos of Aretha playing at La Pontiniere, Normandie"
+        >
+          La Potiniere
+        </a>
+        , before she went on her first tour to Germany in summer 2018. Besides
+        of her successful{" "}
+        <a
+          href="/photos/klangfest-munich-germany-06-2019"
+          title="Aretha Iskandar - live at Klangfest Munich, Photos"
+        >
+          showcase at Munich’s renown festival KLANGfest
+        </a>{" "}
         Aretha and her band performed in such venues as the legendary club The
         Village or Lump, Stein &amp; Küchenmeister.
       </p>

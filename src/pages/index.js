@@ -19,12 +19,12 @@ const IndexPage = ({ data: { allImages } }) => {
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO
         title="Welcome"
-        description="Aretha Iskandar is a french-indonesian Jazz and Soul singer, currently based in Paris, France."
+        description="Aretha Iskandar is a french-indonesian Jazz and Soul singer, currently based in Paris, France. Welcome to the personal website of Aretha Iskandar."
       />
       <div className="content--home">
         <div className="logo-svg">
           <a
-            href="/bio"
+            href="/music"
             title="Aretha Iskandar - Enter website"
             className="logo--inner"
           ></a>

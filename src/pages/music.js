@@ -19,7 +19,11 @@ const MusicPage = () => (
           <p>Live at Klangfest, Munich, 2019.</p>
           <Video
             videoSrcURL="https://www.youtube.com/embed/DsrUlJoAUjk"
-            videoTitle="Live at Klangfest"
+            videoTitle="Impermanence - Live at Klangfest"
+          />
+          <Video
+            videoSrcURL="https://www.youtube.com/embed/QTTWYwUQIP0"
+            videoTitle="Not sure - Live at Klangfest"
           />
           <p>
             Thank you to the talented musicians who accompanied me:{" "}

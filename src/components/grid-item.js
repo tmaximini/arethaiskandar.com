@@ -5,6 +5,7 @@ const GridItem = styled.article`
 
   height: 50%;
   width: 100%;
+  overflow: hidden;
 
   @media screen and (min-width: 53em) {
     width: 50%;
@@ -23,6 +24,7 @@ const GridItem = styled.article`
   }
   > div img {
     transition: all 0.3s ease 0s !important;
+    max-width: 100%;
     &:hover {
       transform: ${props => (props.noEffect ? "none" : "scale3d(1.1, 1.1, 1)")};
     }

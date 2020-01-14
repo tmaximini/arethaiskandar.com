@@ -37,6 +37,16 @@ const News = ({ data: { news, images } }) => {
               videoTitle="Official Music Video on YouTube"
             />
           ))}
+        <GridItem noEffect key="dossier-pdf">
+          <div style={{ backgroundColor: "white", padding: "20px 0" }}>
+            <a
+              title="download dossier de presse pdf"
+              href="/arethaiskandar-dossier-de-presse.pdf"
+            >
+              <img src="/dossier.png" />
+            </a>
+          </div>
+        </GridItem>
       </section>
     </Layout>
   )

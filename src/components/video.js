@@ -8,6 +8,7 @@ const VideoContainer = styled.div`
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+  margin-bottom: 2rem;
 
   iframe {
     position: absolute;

@@ -60,6 +60,15 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:card`,
           content: `summary`,
         },
+
+        {
+          name: `twitter:site`,
+          content: `@arethaiskandar`,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://arethaiskandar.com/1.jpg`,
+        },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,

@@ -161,6 +161,11 @@ const Philosophy = ({ data }) => {
         dans ma musique, et dans tout ce que je fais, dans la manière la plus
         précise et authentique.
       </p>
+      <p>
+        <a href="/bio" title="Aretha Iskandar - Biography">
+          Read my Biography
+        </a>
+      </p>
       <Img
         alt="Aretha Iskandar - Photo 2"
         title="Aretha Iskandar"

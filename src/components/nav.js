@@ -301,7 +301,7 @@ export default class Nav extends Component {
             <ul>
               <li>13/02/2020, L'Étage, Paris</li>
               <li>05/03/2020, Culture Rapide, Paris</li>
-              <li>10/03/2020, Madame Simon, Paris</li>
+              <li>10/03/2020, Madame Simone, Paris</li>
               <li>19/03/2020, Manufacture de la chanson, Paris</li>
               <li>26/03/2020, Espace Corderie, Paris</li>
               <li>31/03/2020, L'Étage, Paris</li>

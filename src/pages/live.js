@@ -61,11 +61,11 @@ const DatesPage = () => (
             </tr>
             <tr>
               <td>10/03/2020</td>
-              <td>Madame Simon, Paris</td>
+              <td>Madame Simone, Paris</td>
             </tr>
             <tr>
               <td>19/03/2020</td>
-              <td>Manufactude de la chanson, Paris</td>
+              <td>Manufacture de la chanson, Paris</td>
             </tr>
             <tr>
               <td>26/03/2020</td>

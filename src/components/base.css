@@ -917,3 +917,14 @@ main {
   box-sizing: content-box;
   background-repeat: no-repeat;
 }
+
+.menu__item-inner ul {
+  list-style: none;
+  text-align: left;
+}
+
+.menu__item-inner ul li {
+  padding: 5px 2.5px;
+  font-size: 0.9rem;
+  font-style: italic;
+}

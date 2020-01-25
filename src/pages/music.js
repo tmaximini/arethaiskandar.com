@@ -17,6 +17,14 @@ const MusicPage = () => (
         <div className="inner">
           <h3>Aretha Iskandar and band</h3>
           <p>Live at Klangfest, Munich, 2019.</p>
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/741440173&color=%2375cca4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe>
           <Video
             videoSrcURL="https://www.youtube.com/embed/DsrUlJoAUjk"
             videoTitle="Impermanence - Live at Klangfest"

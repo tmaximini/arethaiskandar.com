@@ -9,9 +9,14 @@ import styled from "styled-components"
 const LiveShows = styled.div`
   font-family: "Quicksand", sans-serif;
   width: 100%;
+  text-shadow: 2px 2px 2px #323232;
 
   h1 {
     font-size: 2rem;
+  }
+
+  table {
+    margin-bottom: 30px;
   }
 
   td {
@@ -51,12 +56,20 @@ const DatesPage = () => (
               <td>L'Étage, Paris </td>
             </tr>
             <tr>
+              <td>05/03/2020</td>
+              <td>Culture Rapide, Paris</td>
+            </tr>
+            <tr>
+              <td>10/03/2020</td>
+              <td>Madame Simon, Paris</td>
+            </tr>
+            <tr>
               <td>19/03/2020</td>
               <td>Manufactude de la chanson, Paris</td>
             </tr>
             <tr>
               <td>26/03/2020</td>
-              <td> Espace Corderie, Paris</td>
+              <td>Espace Corderie, Paris</td>
             </tr>
             <tr>
               <td>31/03/2020</td>

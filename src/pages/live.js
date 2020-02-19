@@ -52,10 +52,6 @@ const DatesPage = () => (
 
           <table>
             <tr>
-              <td>13/02/2020</td>
-              <td>L'Étage, Paris </td>
-            </tr>
-            <tr>
               <td>05/03/2020</td>
               <td>Culture Rapide, Paris</td>
             </tr>
@@ -75,11 +71,19 @@ const DatesPage = () => (
               <td>31/03/2020</td>
               <td>L'Étage, Paris</td>
             </tr>
+            <tr>
+              <td>01/04/2020</td>
+              <td>Onze Bar, Paris </td>
+            </tr>
           </table>
 
           <h3>Past</h3>
 
           <table>
+            <tr>
+              <td>03/02/2020</td>
+              <td>L'Étage, Paris </td>
+            </tr>
             <tr>
               <td>19/12/2019</td>
               <td>La Manufacture de la chanson, Paris</td>

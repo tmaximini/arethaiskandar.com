@@ -299,7 +299,6 @@ export default class Nav extends Component {
         <div className="menu__item menu__item--5" data-direction="tb">
           <div className="menu__item-inner">
             <ul>
-              <li>13/02/2020, L'Étage, Paris</li>
               <li>05/03/2020, Culture Rapide, Paris</li>
               <li>10/03/2020, Madame Simone, Paris</li>
               <li>19/03/2020, Manufacture de la chanson, Paris</li>

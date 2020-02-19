@@ -24,13 +24,16 @@ const BioPage = ({ data }) => {
         </a>
         , jeune Franco-Indonésienne est une auteure-compositrice-interprète
         installée à Paris. Lors de sa tournée en Allemagne elle éblouit le label
-        ACT Music, avec lequel elle entre en collaboration.
+        <a href="https://www.actmusic.com/en">ACT Music</a>, avec lequel elle
+        entre en collaboration.
       </p>
       <p>
-        Après son baccalauréat, elle étudie la musique, incluant l'écriture de
-        chansons, le chant, le piano, l'expression scénique, et s'est initiée
-        aux techniques de la soul et du jazz. Aujourd’hui, elle poursuit son
-        projet de composition.
+        À travers ses chansons, elle évoque ses expériences et partage avec nous
+        son univers intime teinté de sensibilité et de vulnérabilité. Ses
+        mélodies sont le plus souvent douces, mais peuvent aussi nous emmener
+        dans des tempos plus rythmés. Grace à voix envoûtante et son
+        authenticité, elle captive le public et le touche en lui exprimant c’est
+        coup de coeur, ses angoisses, son brin de folie.
       </p>
       <p>
         C'est après avoir étudié le piano pendant plus de huit ans qu’elle a
@@ -41,6 +44,11 @@ const BioPage = ({ data }) => {
         Jazz, la Pop et la musique de Broadway. Depuis son déménagement
         d'Indonésie à Paris, Aretha a découvert la poésie de la chanson
         française qu'elle adore.
+      </p>
+      <p>
+        Aretha s’influence des artistes tels que Katie Melua, Norah Jones, Joe
+        Bel, Ben Mazué, Nina Simone, Radiohead, Tim Dup, Adele Portishead,
+        Patrick Watson.
       </p>
       <Quote
         who="Marion Denys"
@@ -53,16 +61,18 @@ const BioPage = ({ data }) => {
         mélodies sont le plus souvent douces, mais peuvent aussi nous emmener
         dans des tempos plus rythmés. Paris a donné à Aretha l’occasion de se
         produire dans plusieurs lieux tels que le{" "}
-        <a
-          href="/photos/sunset-jazz-bar-paris-02-2019"
-          title="Aretha Iskandar live at Sunset Jazz Club, Paris"
-        >
-          Sunset Jazz Club
-        </a>
-        , le 38 Riv ou le Baltar, pour ne nommer que ceux-là. La musique l'a
-        également amenée en Normandie avec des concerts, notamment à La
-        Potinière, avant sa première tournée en Allemagne en été 2018. En plus
-        de son succès au{" "}
+        <i>
+          <a
+            href="/photos/sunset-jazz-bar-paris-02-2019"
+            title="Aretha Iskandar live at Sunset Jazz Club, Paris"
+          >
+            Sunset Jazz Club
+          </a>
+          , le 38 Riv ou le Baltar, L’Étage, La Manufacture de la Chanson
+        </i>
+        , pour ne nommer que ceux-là. La musique l'a également amenée en
+        Normandie avec des concerts, notamment à La Potinière, avant sa première
+        tournée en Allemagne en été 2018. En plus de son succès au{" "}
         <a
           href="/photos/klangfest-munich-germany-06-2019"
           title="Aretha Iskandar - live at Klangfest Munich, Photos"
@@ -71,12 +81,6 @@ const BioPage = ({ data }) => {
         </a>
         , Aretha et son groupe se sont produits dans des lieux tels que le
         légendaire club The Village ou Lump, Stein &amp; Küchenmeister.
-      </p>
-      <p>
-        Depuis l'été 2019, Aretha a signé un contrat exclusif avec{" "}
-        <a href="https://www.actmusic.com/en">ACT Music Publishing</a> et
-        développera ses futurs projets en étroite collaboration avec cette
-        maison.
       </p>
       <Quote
         who="Cecil L. Recchia"
@@ -112,19 +116,27 @@ const BioPage = ({ data }) => {
         despite of her young age.
       </p>
       <p>
-        After her baccalaureat she studied music focused on songwriting,
-        singing, piano, expression, rhythm, her own creations and projects, and
-        got initiated to Soul and Jazz techniques.
+        Through her songs, she evokes her experiences and shares with us her
+        intimate musical universe rich with sensitivity and vulnerability. Its
+        melodies are most often sweet, but can also convey rhythmic tempos. With
+        her alluring voice and authenticity, she always captures the audience
+        and expresses her fears, love at first sights and grain of madness.
       </p>
       <p>
         Studying the piano for more than eight years led her to discover that
         singing was what made her vibrate more inside. She started choir singing
-        at the age of twelve, soon after began writing songs. She has been
-        greatly influenced by music during her childhood listening to Swing and
-        Soul, later studying Jazz, Pop and Broadway. Since her move from
-        Indonesia to Paris Aretha discovered the poetry in French chanson which
-        she adores. The mix of these influences give her compositions their own
-        personal sound and language.
+        at the age of twelve, soon after began writing songs. After her
+        baccalaureat she doubled majored in International Relations and studied
+        music focused on songwriting, singing, piano, expression her own
+        creations and projects, and got initiated to Soul and Jazz techniques.
+        Since her move from Indonesia to Paris Aretha discovered the poetry in
+        French chanson which she adores. The mix of these influences give her
+        compositions their own personal sound and language.
+      </p>
+      <p>
+        She has been greatly influenced by artists such as Katie Melua, Norah
+        Jones, Nina Simone, Ben Mazué, Radiohead, Tim Dup, Adele, Portishead,
+        Patrick Watson.
       </p>
       <Quote
         who="Marion Denys"
@@ -133,14 +145,17 @@ const BioPage = ({ data }) => {
       <p>
         Paris has given Aretha the opportunity to perform in several venues such
         as the{" "}
-        <a
-          href="/photos/sunset-jazz-bar-paris-02-2019"
-          title="Aretha Iskandar live at Sunset Jazz Club, Paris"
-        >
-          Sunset Jazz Club
-        </a>
-        , 38 Riv or Le Baltar, just to name a few. Other concert activities
-        brought her to Normandy with concerts i.e. at{" "}
+        <i>
+          <a
+            href="/photos/sunset-jazz-bar-paris-02-2019"
+            title="Aretha Iskandar live at Sunset Jazz Club, Paris"
+          >
+            Sunset Jazz Club
+          </a>
+          , 38 Riv or Le Baltar, L’Étage, La Manufacture de la chanson
+        </i>
+        , just to name a few. Other concert activities brought her to Normandy
+        with concerts i.e. at{" "}
         <a
           href="/photos"
           title="Photos of Aretha playing at La Pontiniere, Normandie"

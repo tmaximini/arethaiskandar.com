@@ -52,20 +52,12 @@ const DatesPage = () => (
 
           <table>
             <tr>
-              <td>05/03/2020</td>
-              <td>Culture Rapide, Paris</td>
-            </tr>
-            <tr>
-              <td>10/03/2020</td>
-              <td>Madame Simone, Paris</td>
-            </tr>
-            <tr>
               <td>19/03/2020</td>
-              <td>Manufacture de la chanson, Paris</td>
+              <td>Manufacture de la chanson, Paris (cancelled)</td>
             </tr>
             <tr>
               <td>26/03/2020</td>
-              <td>Espace Corderie, Paris</td>
+              <td>Espace Corderie, Paris (cancelled)</td>
             </tr>
             <tr>
               <td>31/03/2020</td>
@@ -80,6 +72,15 @@ const DatesPage = () => (
           <h3>Past</h3>
 
           <table>
+            <tr>
+              <td>10/03/2020</td>
+              <td>Madame Simone, Paris</td>
+            </tr>
+            <tr>
+              <td>05/03/2020</td>
+              <td>Culture Rapide, Paris</td>
+            </tr>
+
             <tr>
               <td>03/02/2020</td>
               <td>L'Étage, Paris </td>

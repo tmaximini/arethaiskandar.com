@@ -297,7 +297,7 @@ export default class Nav extends Component {
           </div>
         </div>
         <div className="menu__item menu__item--5" data-direction="tb">
-          <div className="menu__item-inner">
+          {/* <div className="menu__item-inner">
             <ul>
               <li>05/03/2020, Culture Rapide, Paris</li>
               <li>10/03/2020, Madame Simone, Paris</li>
@@ -305,7 +305,7 @@ export default class Nav extends Component {
               <li>26/03/2020, Espace Corderie, Paris</li>
               <li>31/03/2020, L'Étage, Paris</li>
             </ul>
-          </div>
+          </div> */}
         </div>
         <button
           ref={this.openCtrl}

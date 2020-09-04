@@ -15,7 +15,16 @@ const MusicPage = () => (
       <TextElement>
         <h1>Music</h1>
         <div className="inner">
-          <h3>Aretha Iskandar and band</h3>
+          <h3>Interview with Radio Etikett</h3>
+          <p>Catalyst, Funkhaus Berlin, 2020</p>
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/886232272&color=%2375cca4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe>
+          <h3>Aretha Iskandar and Band</h3>
           <p>Live at Klangfest, Munich, 2019.</p>
           <iframe
             width="100%"

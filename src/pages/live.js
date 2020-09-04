@@ -50,24 +50,7 @@ const DatesPage = () => (
           <h1>Live Shows</h1>
           <h3>Upcoming</h3>
 
-          <table>
-            <tr>
-              <td>19/03/2020</td>
-              <td>Manufacture de la chanson, Paris (cancelled)</td>
-            </tr>
-            <tr>
-              <td>26/03/2020</td>
-              <td>Espace Corderie, Paris (cancelled)</td>
-            </tr>
-            <tr>
-              <td>31/03/2020</td>
-              <td>L'Étage, Paris</td>
-            </tr>
-            <tr>
-              <td>01/04/2020</td>
-              <td>Onze Bar, Paris </td>
-            </tr>
-          </table>
+          <table></table>
 
           <h3>Past</h3>
 

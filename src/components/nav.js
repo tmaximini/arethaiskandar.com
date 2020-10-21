@@ -216,13 +216,7 @@ export default class Nav extends Component {
               >
                 Bio
               </Link>
-              <Link
-                to="/about-me"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                About
-              </Link>
+
               <Link
                 to="/news"
                 className="mainmenu__item"

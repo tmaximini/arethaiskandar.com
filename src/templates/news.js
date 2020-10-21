@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import VideoGridItem from "../components/video-grid-item"
 
 const News = ({ data: { news, images } }) => {
+  console.log({ news })
+
   return (
     <Layout showBackdrop customTitle={news.title_detail} customLink="/news">
       <SEO title={`News | ${news.title_detail}`} />
@@ -37,6 +39,22 @@ const News = ({ data: { news, images } }) => {
               videoTitle="Official Music Video on YouTube"
             />
           ))}
+        {news.soundclouds &&
+          news.soundclouds.map(sc => (
+            <GridItem noEffect key="soundcloud">
+              <div className="table">
+                <div className="table--inner">
+                  <iframe
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    allow="autoplay"
+                    src={sc}
+                  ></iframe>
+                </div>
+              </div>
+            </GridItem>
+          ))}
         <GridItem noEffect key="dossier-pdf">
           <div style={{ backgroundColor: "white", padding: "20px 0" }}>
             <a
@@ -61,6 +79,7 @@ export const query = graphql`
       desc
       slug
       videos
+      soundclouds
       translation_en
       translation_fr
       parent {

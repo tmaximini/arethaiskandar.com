@@ -22,8 +22,9 @@ const BioPage = ({ data }) => {
         <a href="/about-me" title="About Aretha Iskandar">
           Aretha Iskandar
         </a>
-        , jeune Franco-Indonésienne est une auteure-compositrice-interprète
-        installée à Paris. Lors de sa tournée en Allemagne elle éblouit le label
+        , Aretha Iskandar, jeune Franco-Indonésienne est une
+        auteure-compositrice-interprète de 22 ans installée à Paris. Lors de sa
+        tournée en Allemagne en 2019 elle séduit le label{" "}
         <a href="https://www.actmusic.com/en">ACT Music</a>, avec lequel elle
         entre en collaboration.
       </p>
@@ -38,17 +39,18 @@ const BioPage = ({ data }) => {
       <p>
         C'est après avoir étudié le piano pendant plus de huit ans qu’elle a
         finalement découvert que le chant était ce qui la faisait vraiment
-        vibrer. Elle a commencé à chanter à l'âge de douze ans, et peu après, à
+        vibrer. Elle commence à chanter à l'âge de douze ans, et peu après, à
         écrire des chansons. Elle a été grandement influencée par la musique
-        durant son enfance en écoutant du Swing &amp; Soul, puis en étudiant le
-        Jazz, la Pop et la musique de Broadway. Depuis son déménagement
-        d'Indonésie à Paris, Aretha a découvert la poésie de la chanson
-        française qu'elle adore.
+        durant son enfance en écoutant de la Soul et de la Pop, puis en étudiant
+        le Jazz. Depuis son déménagement d'Indonésie à Paris, Aretha a découvert
+        la poésie de la chanson française qu'elle adore. Tout en poursuivant ses
+        études de Relations Internationales, Aretha se forme à la Manufacture
+        Chanson, l'Atla et l'ARPEJ.
       </p>
       <p>
-        Aretha s’influence des artistes tels que Katie Melua, Norah Jones, Joe
-        Bel, Ben Mazué, Nina Simone, Radiohead, Tim Dup, Adele Portishead,
-        Patrick Watson.
+        Aretha s’influence des artistes tels que Katie Melua, Norah Jones,
+        Patrick Watson, Joe Bel, Ben Mazué, Barbara, Tim Dup Jacques Brel, Henri
+        Salvador, Nina Simone, Radiohead, Adele...
       </p>
       <Quote
         who="Marion Denys"
@@ -56,11 +58,8 @@ const BioPage = ({ data }) => {
         Aretha investit tout son être dans ses chansons et réussi à nous transmettre des messages, ses messages, à travers de magnifiques mélodies."
       />
       <p>
-        À travers ses chansons, elle évoque ses expériences et partage avec nous
-        son univers intime teinté de sensibilité et de vulnérabilité. Ses
-        mélodies sont le plus souvent douces, mais peuvent aussi nous emmener
-        dans des tempos plus rythmés. Paris a donné à Aretha l’occasion de se
-        produire dans plusieurs lieux tels que le{" "}
+        Paris a donné à Aretha l’occasion de se produire dans plusieurs lieux
+        tels que le{" "}
         <i>
           <a
             href="/photos/sunset-jazz-bar-paris-02-2019"
@@ -191,7 +190,7 @@ const BioPage = ({ data }) => {
     </>
   )
 
-  const [lang, setLang] = useState("en")
+  const [lang, setLang] = useState("fr")
 
   return (
     <Layout light showBackdrop>

@@ -7,8 +7,6 @@ import SEO from "../components/seo"
 import VideoGridItem from "../components/video-grid-item"
 
 const News = ({ data: { news, images } }) => {
-  console.log({ news })
-
   return (
     <Layout showBackdrop customTitle={news.title_detail} customLink="/news">
       <SEO title={`News | ${news.title_detail}`} />

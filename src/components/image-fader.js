@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import FullScreenImage from "./fullscreen-image"
 
@@ -31,7 +31,7 @@ const ImageFader = ({ images }) => {
       {images.map((img, idx) => {
         return (
           <FullScreenImage key={idx} isActive={idx === active}>
-            <Img greyscale fluid={img.node.childImageSharp.fluid} />
+            <GatsbyImage image={img.node.childImageSharp.gatsbyImageData} alt="" />
           </FullScreenImage>
         )
       })}

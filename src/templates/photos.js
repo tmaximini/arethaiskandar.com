@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import GridItem from "../components/grid-item"
 import SEO from "../components/seo"
@@ -12,8 +12,8 @@ const Photos = ({ data: { photos, images } }) => {
       <section className="photogrid">
         {images.nodes.map(node => (
           <GridItem noEffect key={node.name}>
-            <Img
-              fluid={node.childImageSharp.fluid}
+            <GatsbyImage
+              image={getImage(node.childImageSharp.gatsbyImageData)}
               title={`Aretha Iskandar - ${photos.title_detail}`}
               alt={`Aretha Iskandar - ${photos.title_detail}`}
             />
@@ -49,16 +49,14 @@ export const query = graphql`
       }
     }
     images: allFile(
-      sort: { fields: name }
+      sort: { name: ASC }
       filter: { relativePath: { regex: $images } }
     ) {
       nodes {
         name
         extension
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 95, width: 1200, formats: [AUTO, WEBP])
         }
       }
     }

@@ -19,17 +19,6 @@ module.exports = {
     facebook: config.ogSiteName,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: config.googleAnalyticsID,
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        // enable ip anonymization
-        anonymize: true,
-        cookieDomain: "arethaiskandar.com",
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-yaml`,
@@ -85,6 +74,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-netlify-cache",
+    "gatsby-plugin-netlify",
   ],
 }

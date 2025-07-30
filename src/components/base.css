@@ -421,17 +421,44 @@ main {
   color: var(--color-tagline);
 }
 
-.content__tagline {
-  color: var(--color-tagline);
-  margin: 1rem 0 0 0;
-  font-weight: bold;
-  font-size: 1rem;
-  letter-spacing: 0.125rem;
-  word-spacing: 0.25rem;
-  text-transform: uppercase;
+.content__text {
   text-align: center;
   z-index: 199;
   cursor: default;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(0, 0, 0, 0.6);
+  font-family: "Georgia", "Times New Roman", serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content__text h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9), 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+.content__tagline {
+  color: #ffffff;
+  margin: 1rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: lowercase;
+  font-style: italic;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.content__description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1.5rem 0 0 0;
+  font-weight: 300;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .content__inner {
@@ -879,6 +906,60 @@ main {
   .backdrop-header::after {
     display: none;
   }
+
+  .content__text h1 {
+    font-size: 4.5rem;
+  }
+
+  .content__tagline {
+    font-size: 1.4rem;
+  }
+
+  .content__description {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content__text h1 {
+    font-size: 2.5rem;
+  }
+
+  .content__tagline {
+    font-size: 1rem;
+  }
+
+  .content__description {
+    font-size: 1rem;
+  }
+
+  .content__text {
+    padding: 0 1rem;
+  }
+}
+
+.film-section {
+  margin-bottom: 3rem;
+}
+
+.film-subsection {
+  margin-bottom: 1rem;
+}
+
+.film-subsection-title {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.film-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.film-list li {
+  margin-bottom: 0.3rem;
 }
 
 .photogrid {

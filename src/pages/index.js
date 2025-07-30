@@ -18,18 +18,27 @@ const IndexPage = ({ data: { allImages } }) => {
   return (
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO
-        title="ArethaIskandar.com | Welcome to my Website"
-        description="The Website of Aretha Iskandar. Aretha Iskandar is a french-indonesian Jazz and Soul singer, currently based in Paris, France. Welcome to the personal website of Aretha Iskandar."
+        title="Aretha Iskandar | French-Indonesian Filmmaker"
+        description="Aretha Iskandar is a French-Indonesian filmmaker. Her award-winning short-films reflect a delicate, personal cinema and have been screened internationally."
       />
       <div className="content--home">
         <div className="logo-svg">
           <a
-            href="/music"
+            href="/films"
             title="Aretha Iskandar - Enter website"
             className="logo--inner"
           ></a>
         </div>
-        <p className="content__tagline">Soul, Jazz, Chanson</p>
+        <div className="content__text">
+          <p className="content__tagline">
+            raw authenticity through filmmaking
+          </p>
+          <p className="content__description">
+            Aretha Iskandar is a French-Indonesian filmmaker. Her award-winning
+            short-films reflect a delicate, personal cinema and have been
+            screened internationally.
+          </p>
+        </div>
       </div>
     </Layout>
   )
@@ -40,15 +49,13 @@ export default IndexPage
 export const query = graphql`
   query Index {
     allImages: allFile(
-      sort: { fields: name }
+      sort: { name: ASC }
       filter: { sourceInstanceName: { eq: "startImages" } }
     ) {
       edges {
         node {
           childImageSharp {
-            fluid(quality: 65, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(quality: 65, width: 1200)
           }
         }
       }

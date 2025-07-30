@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import GridItem from "../components/grid-item"
 import SEO from "../components/seo"
@@ -14,7 +14,7 @@ const News = ({ data: { news, images } }) => {
         {images.nodes.map(node => {
           return (
             <GridItem noEffect key={node.name}>
-              <Img fluid={node.childImageSharp.fluid} />
+              <GatsbyImage image={getImage(node.childImageSharp.gatsbyImageData)} alt="" />
             </GridItem>
           )
         })}
@@ -91,9 +91,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 95, width: 1200, formats: [AUTO, WEBP])
         }
       }
     }

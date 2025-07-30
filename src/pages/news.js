@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 
 import GridItem from "../components/grid-item"
@@ -10,12 +10,12 @@ const NewsPage = ({ data: { news } }) => (
   <Layout showBackdrop>
     <SEO
       title="News"
-      description="News about Aretha Iskandar. This is where I post concerts, news, interviews and other interesting things on my website to keep you updated."
+      description="Latest news about Aretha Iskandar, French-Indonesian filmmaker and actress. Updates on film screenings, festival selections, awards, and interviews about her intimate, emotionally charged cinema."
     />
     <section className="photogrid">
       {news.nodes.map(news => (
         <GridItem key={news.slug}>
-          <Img fluid={news.cover.childImageSharp.fluid} />
+          <GatsbyImage image={getImage(news.cover.childImageSharp.gatsbyImageData)} alt="" />
           <div className="table">
             <div className="vert-center">
               <h2>{news.title_detail}</h2>
@@ -45,9 +45,7 @@ export const query = graphql`
         slug
         cover {
           childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(quality: 95, width: 1200, formats: [AUTO, WEBP])
           }
         }
       }

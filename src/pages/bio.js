@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import TextElement from "../components/text-element"
 import SEO from "../components/seo"
@@ -89,10 +89,10 @@ const BioPage = ({ data }) => {
   Jeune femme d’abord timide, je l’ai vue se muer en une chanteuse élégante  dont la voix sait se faire puissante et caressante sans jamais trahir la belle simplicité qui la caractérise. 
   Ce fut un réel plaisir de travailler avec elle. Je lui souhaite de poursuivre sur sa belle lancée."
       />
-      <Img
+      <GatsbyImage
         alt="Aretha Iskandar - Info"
         title="Aretha Iskandar"
-        fluid={data.image1.childImageSharp.fluid}
+        image={getImage(data.image1.childImageSharp.gatsbyImageData)}
       />
     </>
   )
@@ -182,10 +182,10 @@ const BioPage = ({ data }) => {
         what="French Jazz vocalist and coach"
         quote="With such a name Aretha was predestined to sing. I had the opportunity to have her among my students at the ATLA school in Paris, where she was introduced to vocal jazz for a year. Young woman, at first shy, I saw her turn into an elegant singer whose voice knows how to be powerful and caressing without ever betraying the beautiful simplicity that it conveys. It was a real pleasure working with her. I wish her continued success."
       />
-      <Img
+      <GatsbyImage
         alt="Aretha Iskandar - Info"
         title="Aretha Iskandar"
-        fluid={data.image1.childImageSharp.fluid}
+        image={getImage(data.image1.childImageSharp.gatsbyImageData)}
       />
     </>
   )
@@ -194,7 +194,10 @@ const BioPage = ({ data }) => {
 
   return (
     <Layout light showBackdrop>
-      <SEO title="About" />
+      <SEO 
+        title="Biography" 
+        description="Biography of Aretha Iskandar, French-Indonesian filmmaker and actress based in Paris. Discover her artistic journey from music to cinema, crafting intimate films that explore human vulnerability and relationships."
+      />
       <div className="content">
         <TextElement>
           <div
@@ -226,23 +229,17 @@ export const query = graphql`
   query {
     image1: file(relativePath: { eq: "about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 500, quality: 100, formats: [AUTO, WEBP])
       }
     }
     image2: file(relativePath: { eq: "about2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 500, quality: 100, formats: [AUTO, WEBP])
       }
     }
     image3: file(relativePath: { eq: "about3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 500, quality: 100, formats: [AUTO, WEBP])
       }
     }
   }

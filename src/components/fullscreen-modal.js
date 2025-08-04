@@ -81,7 +81,12 @@ const FullscreenModal = ({ image, alt, onClose }) => {
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <GatsbyImage image={image} alt={alt} />
+        <GatsbyImage 
+          image={image} 
+          alt={alt} 
+          loading="eager"
+          objectFit="contain"
+        />
       </ModalContent>
       <CloseButton onClick={onClose}>
         ×

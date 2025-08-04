@@ -31,6 +31,8 @@ const StillsPage = ({ data: { stills } }) => {
             <GatsbyImage
               image={getImage(still.childImageSharp.gatsbyImageData)}
               alt={`Film still ${index + 1}`}
+              loading="eager"
+              objectFit="cover"
             />
             <div className="table">
               <div className="vert-center">

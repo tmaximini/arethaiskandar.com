@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import FullScreenImage from "./fullscreen-image"
@@ -20,10 +20,20 @@ const ShadowOverlay = styled("div")`
 
 const ImageFader = ({ images }) => {
   const [active, setActive] = useState(0)
+  const [isReady, setIsReady] = useState(false)
+
+  useEffect(() => {
+    if (images && images.length > 0) {
+      const timer = setTimeout(() => {
+        setIsReady(true)
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [images])
 
   useInterval(() => {
     setActive((active + 1) % images.length)
-  }, 3000)
+  }, isReady ? 3000 : null)
 
   return (
     <div>

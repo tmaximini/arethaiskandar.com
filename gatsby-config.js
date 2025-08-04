@@ -47,7 +47,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "startImages",
-        path: `${__dirname}/content/slider-images`,
+        path: `${__dirname}/content/slider-images/new`,
       },
     },
     {

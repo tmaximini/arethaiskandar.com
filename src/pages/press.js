@@ -16,7 +16,26 @@ const Press = () => {
       
       <div style={{ marginBottom: '2rem' }}>
         <h3>Recent Press Coverage</h3>
-        <p><em>Press materials and coverage will be updated here soon.</em></p>
+        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
+          <iframe 
+            src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title="Vimeo Video 1"
+          ></iframe>
+        </div>
+        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
+          <iframe 
+            src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title="Vimeo Video 2"
+          ></iframe>
+        </div>
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
@@ -47,7 +66,26 @@ const Press = () => {
       
       <div style={{ marginBottom: '2rem' }}>
         <h3>Couverture Presse Récente</h3>
-        <p><em>Les articles et couvertures presse seront mis à jour ici prochainement.</em></p>
+        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
+          <iframe 
+            src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title="Vimeo Video 1"
+          ></iframe>
+        </div>
+        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
+          <iframe 
+            src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title="Vimeo Video 2"
+          ></iframe>
+        </div>
       </div>
 
       <div style={{ marginBottom: '2rem' }}>

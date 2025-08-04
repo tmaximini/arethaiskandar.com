@@ -12,6 +12,9 @@ const Films = () => {
     {
       title: "Après l'été",
       year: 2024,
+      vimeos: [
+        "https://vimeo.com/1106397590"
+      ],
       screenings: [
         "Festival les Égaluantes de Maxime Delauney (Nolita Production)",
         "Cin'été une fois, Barneville-Carteret"
@@ -20,6 +23,9 @@ const Films = () => {
     {
       title: "Alex",  
       year: 2022,
+      vimeos: [
+        "https://vimeo.com/1106396816"
+      ],
       screenings: [
         "Prix des écoles, Nikon Film Festival",
         "Diffusion Brut X",
@@ -68,6 +74,9 @@ const Films = () => {
     {
       title: "T'es mon amour",
       year: 2025,
+      vimeos: [
+        "https://vimeo.com/1106397556"
+      ],
       screenings: [
         "1 minute de court"
       ]
@@ -75,6 +84,9 @@ const Films = () => {
     {
       title: "Madame Héros", 
       year: 2025,
+      vimeos: [
+        "https://vimeo.com/1106397533"
+      ],
       screenings: [
         "1 minute de court"
       ]
@@ -91,6 +103,30 @@ const Films = () => {
         <div key={index} className="film-section">
           <h3>{film.title} ({film.year})</h3>
           
+          {film.vimeos && (
+            <div className="film-subsection">
+              <h4 className="film-subsection-title">Watch</h4>
+              <div className="vimeo-embeds">
+                {film.vimeos.map((vimeo, i) => {
+                  const vimeoId = vimeo.split('/').pop()
+                  return (
+                    <div key={i} className="vimeo-embed" style={{ marginBottom: '20px' }}>
+                      <iframe
+                        src={`https://player.vimeo.com/video/${vimeoId}`}
+                        width="100%"
+                        height="400"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        style={{ width: '100%', minHeight: '400px' }}
+                      ></iframe>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
           {film.awards && (
             <div className="film-subsection">
               <h4 className="film-subsection-title">Awards & Recognition</h4>
@@ -138,6 +174,30 @@ const Films = () => {
         <div key={index} className="film-section">
           <h3>{film.title} ({film.year})</h3>
           
+          {film.vimeos && (
+            <div className="film-subsection">
+              <h4 className="film-subsection-title">Regarder</h4>
+              <div className="vimeo-embeds">
+                {film.vimeos.map((vimeo, i) => {
+                  const vimeoId = vimeo.split('/').pop()
+                  return (
+                    <div key={i} className="vimeo-embed" style={{ marginBottom: '20px' }}>
+                      <iframe
+                        src={`https://player.vimeo.com/video/${vimeoId}`}
+                        width="100%"
+                        height="400"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        style={{ width: '100%', minHeight: '400px' }}
+                      ></iframe>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
           {film.awards && (
             <div className="film-subsection">
               <h4 className="film-subsection-title">Prix & Reconnaissance</h4>

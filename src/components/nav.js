@@ -66,7 +66,7 @@ export default class Nav extends Component {
     global.allowTilt = action === "open" ? false : true
     this.isAnimating = true
     // After all is animated..
-    const animationEnd = pos => {
+    const animationEnd = (pos) => {
       if (pos === this.itemsTotal - 1) {
         this.isAnimating = false
       }
@@ -195,42 +195,41 @@ export default class Nav extends Component {
               </Link>
 
               <Link
-                to="/music"
+                to="/films"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
-                Music
+                Films
+              </Link>
+              <Link
+                to="/stills"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                Stills
+              </Link>
+              <Link
+                to="/press"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                Press
+              </Link>
+              <Link
+                to="/about-me"
+                className="mainmenu__item"
+                activeClassName="mainmenu__item--active"
+              >
+                About Me
               </Link>
 
-              <Link
-                to="/live"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                Live
-              </Link>
-              <Link
-                to="/bio"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                Bio
-              </Link>
-
-              <Link
+              {/* <Link
                 to="/news"
                 className="mainmenu__item"
                 activeClassName="mainmenu__item--active"
               >
                 News
-              </Link>
-              <Link
-                to="/photos"
-                className="mainmenu__item"
-                activeClassName="mainmenu__item--active"
-              >
-                Photos
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -249,13 +248,7 @@ export default class Nav extends Component {
               >
                 <span className="sidemenu__item-inner">Instagram</span>
               </a>
-              <a
-                href="https://www.facebook.com/Aretha-Iskandar-384199759107438"
-                title="Facebook Fan Page"
-                className="sidemenu__item"
-              >
-                <span className="sidemenu__item-inner">Facebook</span>
-              </a>
+
               <a
                 href="https://www.youtube.com/channel/UCICD5lsVNRtPbvCi0sqXZNw"
                 title="Youtube Channel"
@@ -264,13 +257,6 @@ export default class Nav extends Component {
                 <span className="sidemenu__item-inner">Youtube</span>
               </a>
 
-              <a
-                href="https://twitter.com/arethaiskandar"
-                title="Twitter"
-                className="sidemenu__item"
-              >
-                <span className="sidemenu__item-inner">Twitter</span>
-              </a>
               <a
                 href="mailto:info@arethaiskandar.com"
                 title="E-Mail"

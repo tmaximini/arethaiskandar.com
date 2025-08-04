@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 
 import GridItem from "../components/grid-item"
@@ -12,8 +12,8 @@ const PhotosPage = ({ data: { photos } }) => (
     <section className="photogrid">
       {photos.nodes.map(photo => (
         <GridItem key={photo.slug}>
-          <Img
-            fluid={photo.cover.childImageSharp.fluid}
+          <GatsbyImage
+            image={getImage(photo.cover.childImageSharp.gatsbyImageData)}
             title={`Aretha Iskandar - ${photo.title_detail}`}
             alt={`Aretha Iskandar - ${photo.title_detail}`}
           />
@@ -46,9 +46,7 @@ export const query = graphql`
         slug
         cover {
           childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(quality: 95, width: 1200, formats: [AUTO, WEBP])
           }
         }
       }

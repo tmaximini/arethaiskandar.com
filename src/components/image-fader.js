@@ -27,7 +27,16 @@ const ImageFader = ({ images }) => {
       const timer = setTimeout(() => {
         setIsReady(true)
       }, 100)
-      return () => clearTimeout(timer)
+      
+      // Fallback timer in case images don't load properly
+      const fallbackTimer = setTimeout(() => {
+        setIsReady(true)
+      }, 2000)
+      
+      return () => {
+        clearTimeout(timer)
+        clearTimeout(fallbackTimer)
+      }
     }
   }, [images])
 

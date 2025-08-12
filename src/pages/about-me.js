@@ -14,6 +14,16 @@ const Philosophy = ({ data }) => {
       <p>
         Aretha Iskandar is a French-Indonesian filmmaker and actress based in Paris. She crafts emotionally charged, intimate films that explore human relationships, vulnerability, and identity. Most of her work were made in France, Germany and Italy.
       </p>
+      
+      <div style={{ marginBottom: '2rem' }}>
+        <h3>Languages</h3>
+        <p><strong>French:</strong> Native</p>
+        <p><strong>English:</strong> Fluent</p>
+        <p><strong>Indonesian:</strong> Fluent</p>
+        <p><strong>German:</strong> Basic</p>
+        <p><strong>Italian:</strong> Basic</p>
+      </div>
+
       <p>
         Her debut short Raphael (2020), filmed in Berlin, received multiple awards and was acquired by the U.S. platform Dekkoo. In 2021, she co-directed ALEX in Italy, which won a jury prize at the Nikon Film Festival and was selected for the Marché du Film at the Cannes Film Festival. It was also broadcast on BrutX and continues to screen internationally.
       </p>
@@ -50,6 +60,16 @@ const Philosophy = ({ data }) => {
       <p>
         Aretha Iskandar est une réalisatrice et comédienne franco-indonésienne basée à Paris. Elle développe un cinéma intime et émotionnel, centré sur les relations humaines, la vulnérabilité et les identités en mouvement. Ses court-métrages ont majoritairement été tournés en Italie, en Allemagne et en France.
       </p>
+      
+      <div style={{ marginBottom: '2rem' }}>
+        <h3>Langues</h3>
+        <p><strong>Français :</strong> Langue maternelle</p>
+        <p><strong>Anglais :</strong> Courant</p>
+        <p><strong>Indonésien :</strong> Courant</p>
+        <p><strong>Allemand :</strong> Notions</p>
+        <p><strong>Italien :</strong> Notions</p>
+      </div>
+
       <p>
         Son premier court-métrage, Raphael (2020), tourné à Berlin, a reçu plusieurs prix en festivals et a été acquis par la plateforme américaine Dekkoo. En 2021, elle co-réalise ALEX en Italie, qui remporte un prix du jury au Nikon Film Festival, est sélectionné au Marché du Film du Festival de Cannes, et diffusé sur BrutX. Le film continue de circuler à l'international.
       </p>

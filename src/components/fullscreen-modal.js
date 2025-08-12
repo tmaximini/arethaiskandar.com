@@ -20,6 +20,7 @@ const ModalContent = styled.div`
   max-width: 90vw;
   max-height: 90vh;
   cursor: default;
+  overflow-y: auto;
   
   .gatsby-image-wrapper {
     max-width: 90vw !important;
@@ -28,6 +29,14 @@ const ModalContent = styled.div`
   
   img {
     object-fit: contain !important;
+  }
+  
+  /* Hide scrollbars while keeping functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
   }
 `
 
@@ -63,7 +72,7 @@ const CloseButton = styled.button`
   }
 `
 
-const FullscreenModal = ({ image, alt, onClose }) => {
+const FullscreenModal = ({ image, alt, onClose, customContent }) => {
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === 'Escape') onClose()
@@ -81,12 +90,16 @@ const FullscreenModal = ({ image, alt, onClose }) => {
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <GatsbyImage 
-          image={image} 
-          alt={alt} 
-          loading="eager"
-          objectFit="contain"
-        />
+        {customContent ? (
+          customContent
+        ) : (
+          <GatsbyImage 
+            image={image} 
+            alt={alt} 
+            loading="eager"
+            objectFit="contain"
+          />
+        )}
       </ModalContent>
       <CloseButton onClick={onClose}>
         ×

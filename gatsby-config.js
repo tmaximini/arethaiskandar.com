@@ -39,13 +39,6 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "news",
-        path: `${__dirname}/content/news`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "startImages",
         path: `${__dirname}/content/slider-images/new`,
       },

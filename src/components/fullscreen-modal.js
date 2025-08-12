@@ -9,11 +9,14 @@ const ModalOverlay = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  pointer-events: auto;
+  touch-action: none;
+  overflow: hidden;
 `
 
 const ModalContent = styled.div`
@@ -42,15 +45,15 @@ const ModalContent = styled.div`
 
 const CloseButton = styled.button`
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
   font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10000;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border-radius: 50%;
@@ -59,6 +62,7 @@ const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: auto;
 
   &:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -70,6 +74,15 @@ const CloseButton = styled.button`
     outline: none;
     border-color: #75cca4;
   }
+
+  @media (max-width: 768px) {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
 `
 
 const FullscreenModal = ({ image, alt, onClose, customContent }) => {
@@ -78,11 +91,22 @@ const FullscreenModal = ({ image, alt, onClose, customContent }) => {
       if (e.key === 'Escape') onClose()
     }
     
+    // Prevent scrolling on the background
     document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+    
+    // Prevent touch scrolling on mobile
+    const preventTouchMove = (e) => {
+      e.preventDefault()
+    }
+    
+    document.addEventListener('touchmove', preventTouchMove, { passive: false })
     window.addEventListener('keydown', handleKeyPress)
     
     return () => {
       document.body.style.overflow = 'auto'
+      document.documentElement.style.overflow = 'auto'
+      document.removeEventListener('touchmove', preventTouchMove)
       window.removeEventListener('keydown', handleKeyPress)
     }
   }, [onClose])

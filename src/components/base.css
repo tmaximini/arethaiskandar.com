@@ -333,6 +333,30 @@ main {
   padding-bottom: 40%;
   text-align: left;
   height: 100vh;
+  min-height: 100vh;
+}
+
+/* Handle mobile landscape orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .content--home {
+    justify-content: center;
+    padding-bottom: 20%;
+    min-height: 100vh;
+  }
+  
+  .content__text h1 {
+    font-size: 2rem !important;
+  }
+  
+  .content__tagline {
+    font-size: 0.9rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  .content__description {
+    font-size: 0.9rem !important;
+    margin: 1rem 0 0 0 !important;
+  }
 }
 
 /* Header */

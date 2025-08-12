@@ -16,25 +16,63 @@ const Press = () => {
       
       <div style={{ marginBottom: '2rem' }}>
         <h3>Recent Press Coverage</h3>
-        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
-          <iframe 
-            src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowFullScreen
-            title="Vimeo Video 1"
-          ></iframe>
-        </div>
-        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
-          <iframe 
-            src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowFullScreen
-            title="Vimeo Video 2"
-          ></iframe>
+        <div style={{ 
+          display: 'flex', 
+          gap: '1rem',
+          flexWrap: 'wrap',
+          marginBottom: '1rem'
+        }}>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <iframe 
+              src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              title="Vimeo Video 1"
+            ></iframe>
+          </div>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <iframe 
+              src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              title="Vimeo Video 2"
+            ></iframe>
+          </div>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <video 
+              controls
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              title="Press Video 3"
+            >
+              <source src="/static/press-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
 
@@ -66,25 +104,63 @@ const Press = () => {
       
       <div style={{ marginBottom: '2rem' }}>
         <h3>Couverture Presse Récente</h3>
-        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
-          <iframe 
-            src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowFullScreen
-            title="Vimeo Video 1"
-          ></iframe>
-        </div>
-        <div style={{ marginBottom: '1rem', position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
-          <iframe 
-            src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowFullScreen
-            title="Vimeo Video 2"
-          ></iframe>
+        <div style={{ 
+          display: 'flex', 
+          gap: '1rem',
+          flexWrap: 'wrap',
+          marginBottom: '1rem'
+        }}>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <iframe 
+              src="https://player.vimeo.com/video/791966372?h=f595a76720&byline=0&portrait=0" 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              title="Vimeo Video 1"
+            ></iframe>
+          </div>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <iframe 
+              src="https://player.vimeo.com/video/788812209?h=f595a76720&byline=0&portrait=0" 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              title="Vimeo Video 2"
+            ></iframe>
+          </div>
+          <div style={{ 
+            flex: '1 1 300px', 
+            minWidth: '300px',
+            position: 'relative', 
+            width: '100%', 
+            height: 0, 
+            paddingBottom: '56.25%' 
+          }}>
+            <video 
+              controls
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              title="Press Video 3"
+            >
+              <source src="/static/press-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
 

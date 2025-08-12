@@ -30,7 +30,7 @@ const StillsPage = ({ data: { stills } }) => {
           <GridItem key={still.name}>
             <GatsbyImage
               image={getImage(still.childImageSharp.gatsbyImageData)}
-              alt={`Film still ${index + 1}`}
+              alt=""
               loading="eager"
               objectFit="cover"
             />
@@ -39,7 +39,7 @@ const StillsPage = ({ data: { stills } }) => {
                 <button
                   onClick={() => openModal(
                     getImage(still.childImageSharp.fullscreen || still.childImageSharp.gatsbyImageData),
-                    `Film still ${index + 1}`
+                    ""
                   )}
                   className="show-gallery"
                 >

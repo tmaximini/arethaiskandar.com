@@ -3,7 +3,7 @@ import styled from "styled-components"
 const GridItem = styled.article`
   position: relative;
 
-  height: 50%;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
 

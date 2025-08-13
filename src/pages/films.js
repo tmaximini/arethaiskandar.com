@@ -12,11 +12,33 @@ const FilmsPage = ({ data }) => {
 
   const filmsData = [
     {
+      title: "T'es mon amour",
+      year: 2025,
+      cover: "cover-tes-mon-amour.png",
+      vimeos: ["https://vimeo.com/1106397556"],
+      screenings: ["2025: 1 minute de court"]
+    },
+    {
       title: "Madame Héros",
       year: 2025,
       cover: "cover-madame-heros.png",
       vimeos: ["https://vimeo.com/1106397533"],
-      screenings: ["Festival du Film de Demain"]
+      screenings: ["2025: 1 minute de court"]
+    },
+    {
+      title: "Sous mon cœur, feux d'artifice",
+      year: 2024,
+      cover: "cover-sous-mon-coeur.png",
+      vimeos: ["https://vimeo.com/1106397125"],
+      screenings: [
+        "2025: Lift off Film Festival Londres",
+        "2024: Nikon Film Festival",
+        "2024: Séléction Pop Woman Festival",
+        "2024: Cinemas des nouveaux monde", 
+        "2024: Projection ambassade de New Delhi",
+        "2024: Festival Devenir Réalisateur",
+        "2024: Festival des nouveaux Cinémas"
+      ]
     },
     {
       title: "Après l'été",
@@ -24,30 +46,45 @@ const FilmsPage = ({ data }) => {
       cover: "cover-apres-lete.png",
       vimeos: ["https://vimeo.com/1106397590"],
       screenings: [
-        "Festival les Égaluantes de Maxime Delauney (Nolita Production)",
-        "Cin'été une fois, Barneville-Carteret"
+        "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)",
+        "2024: Cin'été une fois, Barneville-Carteret"
       ]
     },
     {
-      title: "Sous mon cœur, feux d'artifice",
-      year: 2024,
-      cover: "cover-sous-mon-coeur.png",
+      title: "Alex",
+      year: 2022,
+      cover: "cover-alex.png",
+      vimeos: ["https://vimeo.com/1106396816"],
+      awards: ["2022: Prix des écoles, Nikon Film Festival"],
       screenings: [
-        "Lift off Film Festival London (2025)",
-        "Nikon Film Festival",
-        "Sélection Pop Woman Festival",
-        "Cinemas des nouveaux monde", 
-        "Projection ambassade de New Delhi",
-        "Festival Devenir Réalisateur",
-        "Festival des nouveaux Cinémas"
+        "2022: Diffusion Brut X",
+        "2022: Festival Bleu, Paris",
+        "2022: Rencontres du court-métrage",
+        "2022: Festival des 24 courts",
+        "2022: Cantania Film Festival",
+        "2022: Halicarnassus Film Festival",
+        "2022: 3 minutes chrono",
+        "2022: Les Invizibles Film Festival"
       ]
     },
     {
-      title: "T'es mon amour",
-      year: 2025,
-      cover: "cover-tes-mon-amour.png",
-      vimeos: ["https://vimeo.com/1106397556"],
-      screenings: ["Festival du Film de Demain"]
+      title: "Raphael",
+      year: 2020,
+      cover: "cover-raphael.png",
+      awards: [
+        "2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"
+      ],
+      acquisition: "Achat: Gonella Production, Diffusion: Dekkoo Platform",
+      screenings: [
+        "2021: Roma Prisma Film Awards, Rome",
+        "2021: Dumboo Film Festival, New York",
+        "2021: Cinemadamare, Italy",
+        "2021: Snowdance Independent Film Festival, Essen",
+        "2021: Berlin Lift off Film Festival, Berlin",
+        "2021: Paris Filmmaker, Paris",
+        "2021: Paris Play Film Festival, Paris",
+        "2021: ARFF Paris"
+      ]
     }
   ]
 
@@ -73,16 +110,47 @@ const FilmsPage = ({ data }) => {
       <section className="photogrid">
         {filmsData.map((film, index) => {
           const coverImage = getCoverImage(film.cover)
-          if (!coverImage) return null
           
           return (
             <GridItem key={film.title}>
-              <GatsbyImage
-                image={getImage(coverImage.childImageSharp.gatsbyImageData)}
-                alt={`${film.title} cover`}
-                loading="eager"
-                objectFit="cover"
-              />
+              {coverImage ? (
+                <GatsbyImage
+                  image={getImage(coverImage.childImageSharp.gatsbyImageData)}
+                  alt={`${film.title} cover`}
+                  loading="eager"
+                  objectFit="cover"
+                />
+              ) : (
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: '#404040',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  color: 'white',
+                  textAlign: 'center',
+                  padding: '2rem'
+                }}>
+                  <h3 className="placeholder-title" style={{ 
+                    margin: '0 0 0.5rem 0', 
+                    fontSize: '1.5rem',
+                    fontWeight: '300',
+                    transition: 'opacity 0.3s ease'
+                  }}>
+                    {film.title}
+                  </h3>
+                  <p className="placeholder-year" style={{ 
+                    margin: 0, 
+                    fontSize: '1rem',
+                    opacity: 0.8,
+                    transition: 'opacity 0.3s ease'
+                  }}>
+                    {film.year}
+                  </p>
+                </div>
+              )}
               <div className="table">
                 <div className="vert-center">
                   <div className="film-overlay">
@@ -150,6 +218,26 @@ const FilmsPage = ({ data }) => {
                       )
                     })}
                   </div>
+                </div>
+              )}
+
+              {selectedFilm.awards && (
+                <div className="film-modal-section" style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: 'white', marginBottom: '1rem' }}>Awards</h3>
+                  <ul style={{ color: 'white', lineHeight: '1.6' }}>
+                    {selectedFilm.awards.map((award, i) => (
+                      <li key={i}>{award}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {selectedFilm.acquisition && (
+                <div className="film-modal-section" style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: 'white', marginBottom: '1rem' }}>Distribution</h3>
+                  <p style={{ color: 'white', lineHeight: '1.6' }}>
+                    {selectedFilm.acquisition}
+                  </p>
                 </div>
               )}
 

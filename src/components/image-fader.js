@@ -24,14 +24,20 @@ const ImageFader = ({ images }) => {
 
   useEffect(() => {
     if (images && images.length > 0) {
-      const timer = setTimeout(() => {
-        setIsReady(true)
-      }, 100)
+      // Use requestAnimationFrame to ensure DOM is ready
+      const initializeSlider = () => {
+        requestAnimationFrame(() => {
+          setIsReady(true)
+        })
+      }
+      
+      // Small delay to ensure images are mounted
+      const timer = setTimeout(initializeSlider, 200)
       
       // Fallback timer in case images don't load properly
       const fallbackTimer = setTimeout(() => {
         setIsReady(true)
-      }, 2000)
+      }, 3000)
       
       return () => {
         clearTimeout(timer)

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
 import ImageFader from "../components/image-fader"
@@ -6,14 +6,23 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data: { allImages } }) => {
+  const [logoLoaded, setLogoLoaded] = useState(false)
+
   useEffect(() => {
     window.document.body.style = "overflow: hidden"
+
+    // Preload the SVG to prevent flashing
+    const img = new Image()
+    img.onload = () => {
+      setLogoLoaded(true)
+    }
+    img.src = "/logos/arethaiskandar.svg"
 
     // Specify how to clean up after this effect:
     return function cleanup() {
       window.document.body.style = "overflow: auto"
     }
-  })
+  }, [])
 
   return (
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
@@ -26,7 +35,7 @@ const IndexPage = ({ data: { allImages } }) => {
           <a
             href="/films"
             title="Aretha Iskandar - Enter website"
-            className="logo--inner"
+            className={`logo--inner ${logoLoaded ? 'loaded' : ''}`}
           ></a>
         </div>
         <div className="content__text">

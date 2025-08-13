@@ -514,6 +514,12 @@ main {
   padding: 20px;
 }
 
+/* Hide menu buttons when modal is active */
+.modal-active .action--menu,
+.modal-active .action--close {
+  display: none;
+}
+
 .menu--open .action--menu {
   pointer-events: none;
 }
@@ -1021,6 +1027,12 @@ main {
   padding-bottom: calc(100% * 1 / 8);
   box-sizing: content-box;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo--inner.loaded {
+  opacity: 1;
 }
 
 .menu__item-inner ul {

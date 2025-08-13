@@ -9,7 +9,7 @@ const ModalOverlay = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
+  z-index: 100001;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@ const CloseButton = styled.button`
   font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 100002;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border-radius: 50%;
@@ -95,6 +95,9 @@ const FullscreenModal = ({ image, alt, onClose, customContent }) => {
     document.body.style.overflow = 'hidden'
     document.documentElement.style.overflow = 'hidden'
     
+    // Add class to hide menu button when modal is active
+    document.body.classList.add('modal-active')
+    
     // Prevent touch scrolling on mobile
     const preventTouchMove = (e) => {
       e.preventDefault()
@@ -106,6 +109,7 @@ const FullscreenModal = ({ image, alt, onClose, customContent }) => {
     return () => {
       document.body.style.overflow = 'auto'
       document.documentElement.style.overflow = 'auto'
+      document.body.classList.remove('modal-active')
       document.removeEventListener('touchmove', preventTouchMove)
       window.removeEventListener('keydown', handleKeyPress)
     }

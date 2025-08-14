@@ -70,7 +70,6 @@ const Philosophy = ({ data }) => {
       <div className="content">
         <TextElement>
           <div
-            className="content__text"
             style={{
               display: "flex",
               flexDirection: "row",

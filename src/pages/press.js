@@ -80,7 +80,7 @@ const Press = () => {
         <h3>Press Kit</h3>
         <p>For press inquiries, interviews, or screening requests, please contact:</p>
         <p>
-          <strong>Email:</strong> <a href="mailto:info@arethaiskandar.com">info@arethaiskandar.com</a>
+          <strong>Email:</strong> <a href="mailto:iskaretha@gmail.com">iskaretha@gmail.com</a>
         </p>
       </div>
 
@@ -168,7 +168,7 @@ const Press = () => {
         <h3>Dossier de Presse</h3>
         <p>Pour les demandes de presse, interviews ou projections, veuillez contacter :</p>
         <p>
-          <strong>Email :</strong> <a href="mailto:info@arethaiskandar.com">info@arethaiskandar.com</a>
+          <strong>Email :</strong> <a href="mailto:iskaretha@gmail.com">iskaretha@gmail.com</a>
         </p>
       </div>
 

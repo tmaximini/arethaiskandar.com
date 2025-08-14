@@ -258,7 +258,7 @@ export default class Nav extends Component {
               </a>
 
               <a
-                href="mailto:info@arethaiskandar.com"
+                href="mailto:iskaretha@gmail.com"
                 title="E-Mail"
                 className="sidemenu__item"
               >

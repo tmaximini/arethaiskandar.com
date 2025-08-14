@@ -44,7 +44,7 @@ const FilmsPage = ({ data }) => {
       title: "Après l'été",
       year: 2024,
       cover: "cover-apres-lete.png",
-      vimeos: ["https://vimeo.com/1106397590"],
+      vimeos: ["https://vimeo.com/1106397590", "https://vimeo.com/1106398077", "https://vimeo.com/1106397787"],
       screenings: [
         "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)",
         "2024: Cin'été une fois, Barneville-Carteret"
@@ -70,7 +70,8 @@ const FilmsPage = ({ data }) => {
     {
       title: "Raphael",
       year: 2020,
-      cover: "cover-raphael.png",
+      cover: "cover-raphael.jpg",
+      vimeos: ["https://vimeo.com/542312117/159d4cb95f"],
       awards: [
         "2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"
       ],

@@ -15,8 +15,12 @@ const ModalOverlay = styled.div`
   justify-content: center;
   cursor: pointer;
   pointer-events: auto;
-  touch-action: none;
-  overflow: hidden;
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
 `
 
 const ModalContent = styled.div`
@@ -24,6 +28,11 @@ const ModalContent = styled.div`
   max-height: 90vh;
   cursor: default;
   overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    max-height: none;
+    min-height: auto;
+  }
   
   .gatsby-image-wrapper {
     max-width: 90vw !important;
@@ -98,19 +107,18 @@ const FullscreenModal = ({ image, alt, onClose, customContent }) => {
     // Add class to hide menu button when modal is active
     document.body.classList.add('modal-active')
     
-    // Prevent touch scrolling on mobile
+    // Prevent touch scrolling on mobile background only, not on modal content
     const preventTouchMove = (e) => {
-      e.preventDefault()
+      if (e.target === e.currentTarget) {
+        e.preventDefault()
+      }
     }
-    
-    document.addEventListener('touchmove', preventTouchMove, { passive: false })
     window.addEventListener('keydown', handleKeyPress)
     
     return () => {
       document.body.style.overflow = 'auto'
       document.documentElement.style.overflow = 'auto'
       document.body.classList.remove('modal-active')
-      document.removeEventListener('touchmove', preventTouchMove)
       window.removeEventListener('keydown', handleKeyPress)
     }
   }, [onClose])

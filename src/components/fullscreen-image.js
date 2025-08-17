@@ -7,7 +7,9 @@ const FullScreenImage = styled("div")`
   top: 0;
   left: 0;
   opacity: ${props => (props.isActive ? 1 : 0)};
-  transition: all 1s ease 1s;
+  transition: ${props => props.isFirst ? 'opacity 0.5s ease' : 'opacity 1s ease 0.5s'};
+  background-color: #000;
+  
   > div {
     position: absolute !important;
     top: 0;
@@ -15,8 +17,12 @@ const FullScreenImage = styled("div")`
     bottom: 0;
     left: 0;
   }
+  
   > div img {
     transition: all 0.3s ease 0s !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 `
 

@@ -515,10 +515,12 @@ main {
   padding: 20px;
 }
 
-/* Hide menu buttons when modal is active */
+/* Hide menu buttons and logo when modal is active */
 .modal-active .action--menu,
-.modal-active .action--close {
-  display: none;
+.modal-active .action--close,
+.modal-active .action,
+.modal-active .logo-header__title {
+  display: none !important;
 }
 
 .menu--open .action--menu {

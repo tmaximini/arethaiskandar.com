@@ -9,7 +9,7 @@ const ModalOverlay = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 100001;
+  z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +62,7 @@ const CloseButton = styled.button`
   font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
-  z-index: 100002;
+  z-index: 1000000;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border-radius: 50%;

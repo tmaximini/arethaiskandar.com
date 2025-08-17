@@ -369,7 +369,7 @@ main {
   line-height: 1;
   font-weight: normal;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   z-index: 199;
   left: 1.5rem;
@@ -443,6 +443,7 @@ main {
 .logo-header__title a,
 .logo-header__title a:hover {
   color: var(--color-tagline);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .content__text {

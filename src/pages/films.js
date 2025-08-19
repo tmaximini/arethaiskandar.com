@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -9,6 +9,29 @@ import FullscreenModal from "../components/fullscreen-modal"
 
 const FilmsPage = ({ data }) => {
   const [selectedFilm, setSelectedFilm] = useState(null)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+
+  // Force images to load and clear any stuck placeholder states
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImagesLoaded(true)
+
+      // Force a repaint to ensure images are rendered properly
+      const images = document.querySelectorAll("[data-gatsby-image-wrapper]")
+      images.forEach((img) => {
+        const picture = img.querySelector("picture")
+        if (picture) {
+          // Trigger a reflow to ensure proper rendering
+          picture.style.display = "none"
+          // eslint-disable-next-line no-unused-vars
+          const forceReflow = picture.offsetHeight // Force reflow
+          picture.style.display = ""
+        }
+      })
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   const filmsData = [
     {
@@ -120,10 +143,13 @@ const FilmsPage = ({ data }) => {
             <GridItem key={film.title}>
               {coverImage ? (
                 <GatsbyImage
+                  key={`${film.title}-${imagesLoaded}`}
                   image={getImage(coverImage.childImageSharp.gatsbyImageData)}
                   alt={`${film.title} cover`}
                   loading="eager"
                   objectFit="cover"
+                  backgroundColor="transparent"
+                  placeholder="blurred"
                 />
               ) : (
                 <div
@@ -218,19 +244,22 @@ const FilmsPage = ({ data }) => {
                     {selectedFilm.vimeos.map((vimeo, i) => {
                       // Handle both public and private vimeo URLs
                       let embedUrl
-                      const parts = vimeo.split('/')
-                      
-                      if (parts.length >= 5 && parts[parts.length - 1].length > 8) {
+                      const parts = vimeo.split("/")
+
+                      if (
+                        parts.length >= 5 &&
+                        parts[parts.length - 1].length > 8
+                      ) {
                         // For private URLs like https://vimeo.com/542312117/159d4cb95f
                         const videoId = parts[parts.length - 2] // Get 542312117
-                        const hash = parts[parts.length - 1]    // Get 159d4cb95f
+                        const hash = parts[parts.length - 1] // Get 159d4cb95f
                         embedUrl = `https://player.vimeo.com/video/${videoId}?h=${hash}`
                       } else {
                         // For public URLs like https://vimeo.com/1106396816
                         const vimeoId = vimeo.split("/").pop()
                         embedUrl = `https://player.vimeo.com/video/${vimeoId}`
                       }
-                      
+
                       return (
                         <div
                           key={i}

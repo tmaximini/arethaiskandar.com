@@ -28,7 +28,7 @@ const ImprintPage = ({ data }) => {
 
             <p>
               Web design and development by{" "}
-              <a href="https://maxi.io">Thomas Maximini</a>.
+              <a href="https://thomasmaximini.com">Thomas Maximini</a>.
             </p>
 
             <h4>Legal notice</h4>

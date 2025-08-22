@@ -35,49 +35,6 @@ const FilmsPage = ({ data }) => {
 
   const filmsData = [
     {
-      title: "T'es mon amour",
-      year: 2025,
-      cover: "cover-tes-mon-amour.png",
-      vimeos: ["https://vimeo.com/1106397556"],
-      screenings: ["2025: 1 minute de court"],
-    },
-    {
-      title: "Madame Héros",
-      year: 2025,
-      cover: "cover-madame-heros.png",
-      vimeos: ["https://vimeo.com/1106397533"],
-      screenings: ["2025: 1 minute de court"],
-    },
-    {
-      title: "Sous mon cœur, feux d'artifice",
-      year: 2024,
-      cover: "cover-sous-mon-coeur.png",
-      vimeos: ["https://vimeo.com/1106397125"],
-      screenings: [
-        "2025: Lift off Film Festival Londres",
-        "2024: Nikon Film Festival",
-        "2024: Séléction Pop Woman Festival",
-        "2024: Cinemas des nouveaux monde",
-        "2024: Projection ambassade de New Delhi",
-        "2024: Festival Devenir Réalisateur",
-        "2024: Festival des nouveaux Cinémas",
-      ],
-    },
-    {
-      title: "Après l'été",
-      year: 2024,
-      cover: "cover-apres-lete.png",
-      vimeos: [
-        "https://vimeo.com/1106397590",
-        "https://vimeo.com/1106398077",
-        "https://vimeo.com/1106397787",
-      ],
-      screenings: [
-        "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)",
-        "2024: Cin'été une fois, Barneville-Carteret",
-      ],
-    },
-    {
       title: "Alex",
       year: 2022,
       cover: "cover-alex.png",
@@ -95,10 +52,53 @@ const FilmsPage = ({ data }) => {
       ],
     },
     {
+      title: "Sous mon cœur, feux d'artifice",
+      year: 2024,
+      cover: "cover-sous-mon-coeur.png",
+      vimeos: ["https://vimeo.com/1106397125"],
+      screenings: [
+        "2025: Lift off Film Festival Londres",
+        "2024: Nikon Film Festival",
+        "2024: Séléction Pop Woman Festival",
+        "2024: Cinemas des nouveaux monde",
+        "2024: Projection ambassade de New Delhi",
+        "2024: Festival Devenir Réalisateur",
+        "2024: Festival des nouveaux Cinémas",
+      ],
+    },
+    {
+      title: "T'es mon amour",
+      year: 2025,
+      cover: "cover-tes-mon-amour.png",
+      vimeos: ["https://vimeo.com/1106397556"],
+      screenings: ["2025: 1 minute de court"],
+    },
+    {
+      title: "Après l'été",
+      year: 2024,
+      cover: "cover-apres-lete.png",
+      vimeos: [
+        "https://vimeo.com/1106397590",
+        "https://vimeo.com/1106398077",
+        "https://vimeo.com/1106397787",
+      ],
+      screenings: [
+        "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)",
+        "2024: Cin'été une fois, Barneville-Carteret",
+      ],
+    },
+    {
+      title: "Madame Héros",
+      year: 2025,
+      cover: "cover-madame-heros.png",
+      vimeos: ["https://vimeo.com/1106397533"],
+      screenings: ["2025: 1 minute de court"],
+    },
+    {
       title: "Raphael",
       year: 2020,
       cover: "cover-raphael.jpg",
-      vimeos: ["https://vimeo.com/542312117/159d4cb95f"],
+      vimeos: ["https://vimeo.com/1112119668"],
       awards: ["2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"],
       acquisition: "Achat: Gonella Production, Diffusion: Dekkoo Platform",
       screenings: [
@@ -193,7 +193,7 @@ const FilmsPage = ({ data }) => {
               <div className="table">
                 <div className="vert-center">
                   <div className="film-overlay">
-                    <h3 className="film-title">{film.title}</h3>
+                    <h3 className="film-title">{film.title} ({film.year})</h3>
                     <button
                       onClick={() => openModal(film)}
                       className="show-gallery"

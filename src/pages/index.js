@@ -27,7 +27,7 @@ const IndexPage = ({ data: { allImages } }) => {
   return (
     <Layout hideTitle extraComponent={<ImageFader images={allImages.edges} />}>
       <SEO
-        title="Aretha Iskandar - Director, Filmmaker, Actress"
+        title="Aretha Iskandar - Filmmaker"
         description="Aretha Iskandar is a French-Indonesian filmmaker. Her award-winning short-films reflect a delicate, personal cinema and have been screened internationally."
       />
       <div className="content--home">

@@ -12,7 +12,7 @@ const Philosophy = ({ data }) => {
   const markupEnglish = () => (
     <>
       <p>
-        Aretha Iskandar is a French-Indonesian filmmaker and actress based in Paris. She crafts emotionally charged, intimate films that explore human relationships, vulnerability, and identity. Most of her work were made in France, Germany and Italy.
+        Aretha Iskandar is a French-Indonesian filmmaker based in Paris. She crafts emotionally charged, intimate films that explore human relationships, vulnerability, and identity. Most of her work were made in France, Germany and Italy.
       </p>
       <p>
         Her debut short Raphael (2020), filmed in Berlin, received multiple awards and was acquired by the U.S. platform Dekkoo. In 2021, she co-directed ALEX in Italy, which won a jury prize at the Nikon Film Festival and was selected for the Marché du Film at the Cannes Film Festival. It was also broadcast on BrutX and continues to screen internationally.
@@ -65,7 +65,7 @@ const Philosophy = ({ data }) => {
     <Layout light showBackdrop>
       <SEO
         title="About Me"
-        description="Discover Aretha Iskandar, French-Indonesian filmmaker and actress crafting emotionally charged, intimate films exploring human relationships and vulnerability. Award-winning short films screened internationally."
+        description="Discover Aretha Iskandar, French-Indonesian filmmaker and director crafting emotionally charged, intimate films exploring human relationships and vulnerability. Award-winning short films screened internationally."
       />
       <div className="content">
         <TextElement>

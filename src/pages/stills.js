@@ -45,7 +45,7 @@ const StillsPage = ({ data: { stills } }) => {
     <Layout showBackdrop>
       <SEO
         title="Film Stills"
-        description="Film stills from Aretha Iskandar's cinematographic work. Visual glimpses into the poetic, intimate filmmaking of this French-Indonesian filmmaker and actress, featuring scenes from her award-winning short films."
+        description="Film stills from Aretha Iskandar's cinematographic work. Visual glimpses into the poetic, intimate filmmaking of this French-Indonesian filmmaker, featuring scenes from her award-winning short films."
       />
 
       <section className="photogrid">

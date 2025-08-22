@@ -262,7 +262,7 @@ const Press = () => {
     <Layout light showBackdrop>
       <SEO
         title="Press"
-        description="Press resources for Aretha Iskandar, French-Indonesian filmmaker and actress. Media kit, high-resolution images, and screener access for her award-winning intimate films exploring human vulnerability."
+        description="Press resources for Aretha Iskandar, French-Indonesian filmmaker and Director. Media kit, high-resolution images, and screener access for her award-winning intimate films exploring human vulnerability."
       />
       <div className="content">
         <TextElement>

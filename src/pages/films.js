@@ -132,7 +132,7 @@ const FilmsPage = ({ data }) => {
     <Layout showBackdrop>
       <SEO
         title="Films"
-        description="Explore the filmography of Aretha Iskandar, award-winning French-Indonesian filmmaker and actress. From Raphael (acquired by Dekkoo) to recent works, discover her poetic cinema screened at international festivals."
+        description="Explore the filmography of Aretha Iskandar, award-winning French-Indonesian filmmaker. From Raphael (acquired by Dekkoo) to recent works, discover her poetic cinema screened at international festivals."
       />
 
       <section className="photogrid">

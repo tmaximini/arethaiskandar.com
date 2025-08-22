@@ -196,7 +196,7 @@ const BioPage = ({ data }) => {
     <Layout light showBackdrop>
       <SEO 
         title="Biography" 
-        description="Biography of Aretha Iskandar, French-Indonesian filmmaker and actress based in Paris. Discover her artistic journey from music to cinema, crafting intimate films that explore human vulnerability and relationships."
+        description="Biography of Aretha Iskandar, French-Indonesian filmmaker based in Paris. Discover her artistic journey from music to cinema, crafting intimate films that explore human vulnerability and relationships."
       />
       <div className="content">
         <TextElement>

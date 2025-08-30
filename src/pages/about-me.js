@@ -26,11 +26,7 @@ const Philosophy = ({ data }) => {
       <p>
         In 2025, she won 2nd place on a pitching contest for her short film On se retrouve au Kebab and has directed two really short films T'es mon amour and Madame Héros, that got selected for the festival Festival du Film de Demain.
       </p>
-      <p>
-        <a href="/bio" title="Aretha Iskandar - Biography">
-          Read my Biography
-        </a>
-      </p>
+
     </>
   )
 
@@ -50,11 +46,6 @@ const Philosophy = ({ data }) => {
       </p>
       <p>
         En 2025, elle remporte le second prix lors du concours d'Event pitch pour son film On se retrouve au Kebab? . Elle réalise également deux très court-métrages T'es mon amour et Madame Héros, sélectionné au Festival du film de demain.
-      </p>
-      <p>
-        <a href="/bio" title="Aretha Iskandar - Biography">
-          Read my Biography
-        </a>
       </p>
     </>
   )

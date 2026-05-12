@@ -7,125 +7,56 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FullscreenModal from "../components/fullscreen-modal"
 
+const basename = (path) => {
+  if (!path) return ""
+  return path.split("/").pop()
+}
+
+const buildVimeoEmbed = (vimeo) => {
+  const parts = vimeo.split("/")
+  if (parts.length >= 5 && parts[parts.length - 1].length > 8) {
+    const videoId = parts[parts.length - 2]
+    const hash = parts[parts.length - 1]
+    return `https://player.vimeo.com/video/${videoId}?h=${hash}`
+  }
+  const vimeoId = parts.pop()
+  return `https://player.vimeo.com/video/${vimeoId}`
+}
+
 const FilmsPage = ({ data }) => {
   const [selectedFilm, setSelectedFilm] = useState(null)
   const [imagesLoaded, setImagesLoaded] = useState(false)
 
-  // Force images to load and clear any stuck placeholder states
   useEffect(() => {
     const timer = setTimeout(() => {
       setImagesLoaded(true)
-
-      // Force a repaint to ensure images are rendered properly
       const images = document.querySelectorAll("[data-gatsby-image-wrapper]")
       images.forEach((img) => {
         const picture = img.querySelector("picture")
         if (picture) {
-          // Trigger a reflow to ensure proper rendering
           picture.style.display = "none"
           // eslint-disable-next-line no-unused-vars
-          const forceReflow = picture.offsetHeight // Force reflow
+          const forceReflow = picture.offsetHeight
           picture.style.display = ""
         }
       })
     }, 100)
-
     return () => clearTimeout(timer)
   }, [])
 
-  const filmsData = [
-    {
-      title: "Alex",
-      year: 2022,
-      cover: "cover-alex.png",
-      vimeos: ["https://vimeo.com/1106396816"],
-      awards: ["2022: Prix des écoles, Nikon Film Festival"],
-      screenings: [
-        "2022: Diffusion Brut X",
-        "2022: Festival Bleu, Paris",
-        "2022: Rencontres du court-métrage",
-        "2022: Festival des 24 courts",
-        "2022: Cantania Film Festival",
-        "2022: Halicarnassus Film Festival",
-        "2022: 3 minutes chrono",
-        "2022: Les Invizibles Film Festival",
-      ],
-    },
-    {
-      title: "Sous mon cœur, feux d'artifice",
-      year: 2024,
-      cover: "cover-sous-mon-coeur.png",
-      vimeos: ["https://vimeo.com/1106397125"],
-      screenings: [
-        "2025: Lift off Film Festival Londres",
-        "2024: Nikon Film Festival",
-        "2024: Séléction Pop Woman Festival",
-        "2024: Cinemas des nouveaux monde",
-        "2024: Projection ambassade de New Delhi",
-        "2024: Festival Devenir Réalisateur",
-        "2024: Festival des nouveaux Cinémas",
-      ],
-    },
-    {
-      title: "T'es mon amour",
-      year: 2025,
-      cover: "cover-tes-mon-amour.png",
-      vimeos: ["https://vimeo.com/1106397556"],
-      screenings: ["2025: 1 minute de court"],
-    },
-    {
-      title: "Après l'été",
-      year: 2024,
-      cover: "cover-apres-lete.png",
-      vimeos: [
-        "https://vimeo.com/1106397590",
-        "https://vimeo.com/1106398077",
-        "https://vimeo.com/1106397787",
-      ],
-      screenings: [
-        "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)",
-        "2024: Cin'été une fois, Barneville-Carteret",
-      ],
-    },
-    {
-      title: "Madame Héros",
-      year: 2025,
-      cover: "cover-madame-heros.png",
-      vimeos: ["https://vimeo.com/1106397533"],
-      screenings: ["2025: 1 minute de court"],
-    },
-    {
-      title: "Raphael",
-      year: 2020,
-      cover: "cover-raphael.jpg",
-      vimeos: ["https://vimeo.com/1112119668"],
-      awards: ["2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"],
-      acquisition: "Achat: Gonella Production, Diffusion: Dekkoo Platform",
-      screenings: [
-        "2021: Roma Prisma Film Awards, Rome",
-        "2021: Dumboo Film Festival, New York",
-        "2021: Cinemadamare, Italy",
-        "2021: Snowdance Independent Film Festival, Essen",
-        "2021: Berlin Lift off Film Festival, Berlin",
-        "2021: Paris Filmmaker, Paris",
-        "2021: Paris Play Film Festival, Paris",
-        "2021: ARFF Paris",
-      ],
-    },
-  ]
+  const films = [...data.films.nodes].sort((a, b) => {
+    const ao = a.order ?? 9999
+    const bo = b.order ?? 9999
+    return ao - bo
+  })
 
-  const openModal = (film) => {
-    setSelectedFilm(film)
-  }
+  const coverByBase = new Map(
+    data.covers.nodes.map((node) => [node.base, node])
+  )
 
-  const closeModal = () => {
-    setSelectedFilm(null)
-  }
-
-  const getCoverImage = (coverName) => {
-    return data.covers.nodes.find(
-      (node) => node.name === coverName.replace(/\.(png|jpg|jpeg)$/, "")
-    )
+  const getCoverImage = (coverPath) => {
+    if (!coverPath) return null
+    return coverByBase.get(basename(coverPath)) || null
   }
 
   return (
@@ -136,15 +67,19 @@ const FilmsPage = ({ data }) => {
       />
 
       <section className="photogrid">
-        {filmsData.map((film, index) => {
+        {films.map((film) => {
           const coverImage = getCoverImage(film.cover)
+          const gatsbyImage =
+            coverImage && coverImage.childImageSharp
+              ? getImage(coverImage.childImageSharp.gatsbyImageData)
+              : null
 
           return (
-            <GridItem key={film.title}>
-              {coverImage ? (
+            <GridItem key={`${film.title}-${film.year}`}>
+              {gatsbyImage ? (
                 <GatsbyImage
                   key={`${film.title}-${imagesLoaded}`}
-                  image={getImage(coverImage.childImageSharp.gatsbyImageData)}
+                  image={gatsbyImage}
                   alt={`${film.title} cover`}
                   loading="eager"
                   objectFit="cover"
@@ -193,9 +128,11 @@ const FilmsPage = ({ data }) => {
               <div className="table">
                 <div className="vert-center">
                   <div className="film-overlay">
-                    <h3 className="film-title">{film.title} ({film.year})</h3>
+                    <h3 className="film-title">
+                      {film.title} ({film.year})
+                    </h3>
                     <button
-                      onClick={() => openModal(film)}
+                      onClick={() => setSelectedFilm(film)}
                       className="show-gallery"
                     >
                       <span>View Details</span>
@@ -210,7 +147,7 @@ const FilmsPage = ({ data }) => {
 
       {selectedFilm && (
         <FullscreenModal
-          onClose={closeModal}
+          onClose={() => setSelectedFilm(null)}
           customContent={
             <div
               className="film-modal-content"
@@ -223,76 +160,51 @@ const FilmsPage = ({ data }) => {
             >
               <div
                 className="film-modal-header"
-                style={{
-                  marginBottom: "2rem",
-                  textAlign: "center",
-                }}
+                style={{ marginBottom: "2rem", textAlign: "center" }}
               >
                 <h2 style={{ margin: 0, color: "white" }}>
                   {selectedFilm.title} ({selectedFilm.year})
                 </h2>
               </div>
 
-              {selectedFilm.vimeos && (
+              {selectedFilm.vimeos && selectedFilm.vimeos.length > 0 && (
                 <div
                   className="film-modal-section"
-                  style={{
-                    marginBottom: "3rem",
-                  }}
+                  style={{ marginBottom: "3rem" }}
                 >
                   <div className="vimeo-embeds">
-                    {selectedFilm.vimeos.map((vimeo, i) => {
-                      // Handle both public and private vimeo URLs
-                      let embedUrl
-                      const parts = vimeo.split("/")
-
-                      if (
-                        parts.length >= 5 &&
-                        parts[parts.length - 1].length > 8
-                      ) {
-                        // For private URLs like https://vimeo.com/542312117/159d4cb95f
-                        const videoId = parts[parts.length - 2] // Get 542312117
-                        const hash = parts[parts.length - 1] // Get 159d4cb95f
-                        embedUrl = `https://player.vimeo.com/video/${videoId}?h=${hash}`
-                      } else {
-                        // For public URLs like https://vimeo.com/1106396816
-                        const vimeoId = vimeo.split("/").pop()
-                        embedUrl = `https://player.vimeo.com/video/${vimeoId}`
-                      }
-
-                      return (
-                        <div
-                          key={i}
-                          className="vimeo-embed"
+                    {selectedFilm.vimeos.map((vimeo, i) => (
+                      <div
+                        key={i}
+                        className="vimeo-embed"
+                        style={{
+                          position: "relative",
+                          width: "100%",
+                          paddingBottom: "56.25%",
+                          height: 0,
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <iframe
+                          src={buildVimeoEmbed(vimeo)}
                           style={{
-                            position: "relative",
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
                             width: "100%",
-                            paddingBottom: "56.25%",
-                            height: 0,
-                            marginBottom: "1rem",
+                            height: "100%",
                           }}
-                        >
-                          <iframe
-                            src={embedUrl}
-                            style={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              width: "100%",
-                              height: "100%",
-                            }}
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                      )
-                    })}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
 
-              {selectedFilm.awards && (
+              {selectedFilm.awards && selectedFilm.awards.length > 0 && (
                 <div
                   className="film-modal-section"
                   style={{ marginBottom: "2rem" }}
@@ -322,18 +234,19 @@ const FilmsPage = ({ data }) => {
                 </div>
               )}
 
-              {selectedFilm.screenings && (
-                <div className="film-modal-section">
-                  <h3 style={{ color: "white", marginBottom: "1rem" }}>
-                    Festival Screenings
-                  </h3>
-                  <ul style={{ color: "white", lineHeight: "1.6" }}>
-                    {selectedFilm.screenings.map((screening, i) => (
-                      <li key={i}>{screening}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {selectedFilm.screenings &&
+                selectedFilm.screenings.length > 0 && (
+                  <div className="film-modal-section">
+                    <h3 style={{ color: "white", marginBottom: "1rem" }}>
+                      Festival Screenings
+                    </h3>
+                    <ul style={{ color: "white", lineHeight: "1.6" }}>
+                      {selectedFilm.screenings.map((screening, i) => (
+                        <li key={i}>{screening}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
           }
         />
@@ -346,26 +259,31 @@ export default FilmsPage
 
 export const query = graphql`
   query FilmsPage {
+    films: allFilmsYaml {
+      nodes {
+        order
+        title
+        year
+        cover
+        vimeos
+        awards
+        screenings
+        acquisition
+      }
+    }
     covers: allFile(
       filter: {
-        sourceInstanceName: { eq: "images" }
-        name: { regex: "/^cover-/" }
+        sourceInstanceName: { eq: "uploads" }
         extension: { regex: "/(jpg|jpeg|png)/" }
       }
-      sort: { name: ASC }
     ) {
       nodes {
-        name
+        base
         childImageSharp {
           gatsbyImageData(
             width: 400
             height: 225
             quality: 85
-            formats: [AUTO, WEBP]
-            placeholder: BLURRED
-          )
-          fullscreen: gatsbyImageData(
-            quality: 95
             formats: [AUTO, WEBP]
             placeholder: BLURRED
           )

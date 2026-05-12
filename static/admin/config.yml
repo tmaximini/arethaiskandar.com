@@ -1,0 +1,107 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Local backend for `npx decap-server` during development.
+# Run `npx decap-server` in another terminal, then visit /admin/?local=true
+local_backend: true
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+site_url: https://www.arethaiskandar.com
+display_url: https://www.arethaiskandar.com
+logo_url: https://www.arethaiskandar.com/logos/aretha.png
+
+collections:
+  - name: "films"
+    label: "Films"
+    label_singular: "Film"
+    files:
+      - file: "content/films/films.yaml"
+        label: "Films list"
+        name: "films-list"
+        description: "Add, edit, reorder, or remove films. The Films page renders entries in ascending Order — lower numbers appear first."
+        fields:
+          - label: "Films"
+            name: "films"
+            widget: "list"
+            label_singular: "Film"
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - label: "Order (lower = shown first)"
+                name: "order"
+                widget: "number"
+                value_type: "int"
+                default: 100
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Year"
+                name: "year"
+                widget: "number"
+                value_type: "int"
+                min: 1900
+                max: 2100
+              - label: "Cover image"
+                name: "cover"
+                widget: "image"
+                media_folder: "/static/uploads/films"
+                public_folder: "/uploads/films"
+              - label: "Vimeo links"
+                name: "vimeos"
+                widget: "list"
+                required: false
+                default: []
+                field:
+                  label: "Vimeo URL"
+                  name: "url"
+                  widget: "string"
+              - label: "Awards"
+                name: "awards"
+                widget: "list"
+                required: false
+                default: []
+                field:
+                  label: "Award"
+                  name: "text"
+                  widget: "string"
+              - label: "Festival screenings"
+                name: "screenings"
+                widget: "list"
+                required: false
+                default: []
+                field:
+                  label: "Screening"
+                  name: "text"
+                  widget: "string"
+              - label: "Acquisition / distribution"
+                name: "acquisition"
+                widget: "string"
+                required: false
+
+  - name: "pages"
+    label: "Site text"
+    label_singular: "Page text"
+    files:
+      - file: "content/pages/about.yaml"
+        label: "About me page"
+        name: "about-me"
+        description: "Edit the About Me page in English and French. Separate paragraphs with a blank line."
+        fields:
+          - label: "Internal name (do not change)"
+            name: "name"
+            widget: "hidden"
+            default: "about-me"
+          - label: "Title (English)"
+            name: "title_en"
+            widget: "string"
+          - label: "Title (French)"
+            name: "title_fr"
+            widget: "string"
+          - label: "Body (English)"
+            name: "body_en"
+            widget: "text"
+          - label: "Body (French)"
+            name: "body_fr"
+            widget: "text"

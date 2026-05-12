@@ -44,7 +44,7 @@ const FilmsPage = ({ data }) => {
     return () => clearTimeout(timer)
   }, [])
 
-  const films = [...data.films.nodes].sort((a, b) => {
+  const films = [...(data.filmsYaml?.films ?? [])].sort((a, b) => {
     const ao = a.order ?? 9999
     const bo = b.order ?? 9999
     return ao - bo
@@ -259,8 +259,8 @@ export default FilmsPage
 
 export const query = graphql`
   query FilmsPage {
-    films: allFilmsYaml {
-      nodes {
+    filmsYaml {
+      films {
         order
         title
         year

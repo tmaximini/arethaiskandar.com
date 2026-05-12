@@ -1,81 +1,82 @@
-- order: 10
-  title: "Alex"
-  year: 2022
-  cover: "/uploads/films/cover-alex.png"
-  vimeos:
-    - "https://vimeo.com/1106396816"
-  awards:
-    - "2022: Prix des écoles, Nikon Film Festival"
-  screenings:
-    - "2022: Diffusion Brut X"
-    - "2022: Festival Bleu, Paris"
-    - "2022: Rencontres du court-métrage"
-    - "2022: Festival des 24 courts"
-    - "2022: Cantania Film Festival"
-    - "2022: Halicarnassus Film Festival"
-    - "2022: 3 minutes chrono"
-    - "2022: Les Invizibles Film Festival"
+films:
+  - order: 10
+    title: "Alex"
+    year: 2022
+    cover: "/uploads/films/cover-alex.png"
+    vimeos:
+      - "https://vimeo.com/1106396816"
+    awards:
+      - "2022: Prix des écoles, Nikon Film Festival"
+    screenings:
+      - "2022: Diffusion Brut X"
+      - "2022: Festival Bleu, Paris"
+      - "2022: Rencontres du court-métrage"
+      - "2022: Festival des 24 courts"
+      - "2022: Cantania Film Festival"
+      - "2022: Halicarnassus Film Festival"
+      - "2022: 3 minutes chrono"
+      - "2022: Les Invizibles Film Festival"
 
-- order: 20
-  title: "Sous mon cœur, feux d'artifice"
-  year: 2024
-  cover: "/uploads/films/cover-sous-mon-coeur.png"
-  vimeos:
-    - "https://vimeo.com/1106397125"
-  screenings:
-    - "2025: Lift off Film Festival Londres"
-    - "2024: Nikon Film Festival"
-    - "2024: Séléction Pop Woman Festival"
-    - "2024: Cinemas des nouveaux monde"
-    - "2024: Projection ambassade de New Delhi"
-    - "2024: Festival Devenir Réalisateur"
-    - "2024: Festival des nouveaux Cinémas"
+  - order: 20
+    title: "Sous mon cœur, feux d'artifice"
+    year: 2024
+    cover: "/uploads/films/cover-sous-mon-coeur.png"
+    vimeos:
+      - "https://vimeo.com/1106397125"
+    screenings:
+      - "2025: Lift off Film Festival Londres"
+      - "2024: Nikon Film Festival"
+      - "2024: Séléction Pop Woman Festival"
+      - "2024: Cinemas des nouveaux monde"
+      - "2024: Projection ambassade de New Delhi"
+      - "2024: Festival Devenir Réalisateur"
+      - "2024: Festival des nouveaux Cinémas"
 
-- order: 30
-  title: "T'es mon amour"
-  year: 2025
-  cover: "/uploads/films/cover-tes-mon-amour.png"
-  vimeos:
-    - "https://vimeo.com/1106397556"
-  screenings:
-    - "2025: 1 minute de court"
+  - order: 30
+    title: "T'es mon amour"
+    year: 2025
+    cover: "/uploads/films/cover-tes-mon-amour.png"
+    vimeos:
+      - "https://vimeo.com/1106397556"
+    screenings:
+      - "2025: 1 minute de court"
 
-- order: 40
-  title: "Après l'été"
-  year: 2024
-  cover: "/uploads/films/cover-apres-lete.png"
-  vimeos:
-    - "https://vimeo.com/1106397590"
-    - "https://vimeo.com/1106398077"
-    - "https://vimeo.com/1106397787"
-  screenings:
-    - "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)"
-    - "2024: Cin'été une fois, Barneville-Carteret"
+  - order: 40
+    title: "Après l'été"
+    year: 2024
+    cover: "/uploads/films/cover-apres-lete.png"
+    vimeos:
+      - "https://vimeo.com/1106397590"
+      - "https://vimeo.com/1106398077"
+      - "https://vimeo.com/1106397787"
+    screenings:
+      - "2024: Festival les Égaluantes de Maxime Delauney (Nolita Production)"
+      - "2024: Cin'été une fois, Barneville-Carteret"
 
-- order: 50
-  title: "Madame Héros"
-  year: 2025
-  cover: "/uploads/films/cover-madame-heros.png"
-  vimeos:
-    - "https://vimeo.com/1106397533"
-  screenings:
-    - "2025: 1 minute de court"
+  - order: 50
+    title: "Madame Héros"
+    year: 2025
+    cover: "/uploads/films/cover-madame-heros.png"
+    vimeos:
+      - "https://vimeo.com/1106397533"
+    screenings:
+      - "2025: 1 minute de court"
 
-- order: 60
-  title: "Raphael"
-  year: 2020
-  cover: "/uploads/films/cover-raphael.jpg"
-  vimeos:
-    - "https://vimeo.com/1112119668"
-  awards:
-    - "2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"
-  acquisition: "Achat: Gonella Production, Diffusion: Dekkoo Platform"
-  screenings:
-    - "2021: Roma Prisma Film Awards, Rome"
-    - "2021: Dumboo Film Festival, New York"
-    - "2021: Cinemadamare, Italy"
-    - "2021: Snowdance Independent Film Festival, Essen"
-    - "2021: Berlin Lift off Film Festival, Berlin"
-    - "2021: Paris Filmmaker, Paris"
-    - "2021: Paris Play Film Festival, Paris"
-    - "2021: ARFF Paris"
+  - order: 60
+    title: "Raphael"
+    year: 2020
+    cover: "/uploads/films/cover-raphael.jpg"
+    vimeos:
+      - "https://vimeo.com/1112119668"
+    awards:
+      - "2021: Cinemadamare - Best Screenplay, Best Actor (Italy)"
+    acquisition: "Achat: Gonella Production, Diffusion: Dekkoo Platform"
+    screenings:
+      - "2021: Roma Prisma Film Awards, Rome"
+      - "2021: Dumboo Film Festival, New York"
+      - "2021: Cinemadamare, Italy"
+      - "2021: Snowdance Independent Film Festival, Essen"
+      - "2021: Berlin Lift off Film Festival, Berlin"
+      - "2021: Paris Filmmaker, Paris"
+      - "2021: Paris Play Film Festival, Paris"
+      - "2021: ARFF Paris"

@@ -75,3 +75,15 @@ films:
       - "2021: Paris Filmmaker, Paris"
       - "2021: Paris Play Film Festival, Paris"
       - "2021: ARFF Paris"
+  - order: 100
+    vimeos:
+      - https://vimeo.com/1195651153?share=copy&fl=sv&fe=ci
+    awards:
+      - "Nikon Film Festival : Selection Regard des Femmes (Nikon Film Festival)"
+      - "Nikon Film Festival : Selection Sens critique (Critics' Choice)"
+      - "Nikon Film Festival : Selection Tremplin (Emerging Talent)"
+    screenings:
+      - "Grand Rex screening : Regard des Femmes"
+    title: BEAUTIFUL LIFE
+    year: 2026
+    cover: /uploads/films/screenshot-2026-01-13-at-19.02.42.png

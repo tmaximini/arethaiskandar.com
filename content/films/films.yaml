@@ -11,6 +11,14 @@ films:
     title: BEAUTIFUL LIFE
     year: 2026
     cover: /uploads/films/screenshot-2026-01-13-at-19.02.42.png
+  - order: 2
+    vimeos:
+      - https://vimeo.com/1227855261?share=copy&fl=sv&fe=ci
+    awards: []
+    screenings: []
+    title: SEULES ET SAUVES (mini series)
+    year: 2026
+    cover: /uploads/films/screenshot-2026-01-13-at-18.54.09.png
   - order: 10
     title: Alex
     year: 2022
@@ -87,11 +95,3 @@ films:
       - "2021: Paris Filmmaker, Paris"
       - "2021: Paris Play Film Festival, Paris"
       - "2021: ARFF Paris"
-  - order: 2
-    vimeos:
-      - https://vimeo.com/1227855261?share=copy&fl=sv&fe=ci
-    awards: []
-    screenings: []
-    title: SEULES ET SAUVES (mini series)
-    year: 2026
-    cover: /uploads/films/screenshot-2026-01-13-at-18.54.09.png

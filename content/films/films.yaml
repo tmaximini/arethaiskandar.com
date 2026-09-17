@@ -19,7 +19,7 @@ films:
     title: SEULES ET SAUVES (mini series)
     year: 2026
     cover: /uploads/films/screenshot-2026-01-13-at-18.54.09.png
-  - order: 30
+  - order: 35
     title: Alex
     year: 2022
     cover: /uploads/films/cover-alex.png
@@ -58,7 +58,7 @@ films:
       - https://vimeo.com/1106397556
     screenings:
       - "2025: 1 minute de court"
-  - order: 60
+  - order: 30
     title: Après l'été
     year: 2024
     cover: /uploads/films/cover-apres-lete.png
